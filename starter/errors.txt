@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 41: expected a keyword argument or child statement.
+    (934, 172, 74, 74)
+    ^
+
+Ren'Py Version: Ren'Py 8.2.1.24030407
+Sun Apr 21 23:28:50 2024
