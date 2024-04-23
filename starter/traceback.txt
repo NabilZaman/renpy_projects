@@ -1,27 +1,21 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 69, in script
-    call screen action_select
+  File "game/script.rpy", line 229, in script
+    call screen town_map_select(town_map_morning)
   File "renpy/common/000statements.rpy", line 671, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/script.rpy", line 36, in execute
-    screen action_select():
-  File "game/script.rpy", line 36, in execute
-    screen action_select():
-  File "game/script.rpy", line 37, in execute
-    imagemap:
-  File "game/script.rpy", line 37, in keywords
-    imagemap:
-  File "game/script.rpy", line 39, in <module>
-    hover button_idle
-NameError: name 'button_idle' is not defined
+  File "game/script.rpy", line 121, in interact
+    event = location.pop_next_event()
+  File "game/script.rpy", line 38, in pop_next_event
+    if next_event.reuse:
+AttributeError: 'Event' object has no attribute 'reuse'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 69, in script
-    call screen action_select
+  File "game/script.rpy", line 229, in script
+    call screen town_map_select(town_map_morning)
   File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
     self.call("execute")
   File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1950, in call
@@ -36,35 +30,35 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2687, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2687, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/script.rpy", line 36, in execute
-    screen action_select():
-  File "game/script.rpy", line 36, in execute
-    screen action_select():
-  File "game/script.rpy", line 37, in execute
-    imagemap:
-  File "game/script.rpy", line 37, in keywords
-    imagemap:
-  File "game/script.rpy", line 39, in <module>
-    hover button_idle
-NameError: name 'button_idle' is not defined
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 3201, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 1174, in event
+    return handle_click(self.clicked)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 1095, in handle_click
+    rv = run(action)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+  File "game/script.rpy", line 121, in interact
+    event = location.pop_next_event()
+  File "game/script.rpy", line 38, in pop_next_event
+    if next_event.reuse:
+AttributeError: 'Event' object has no attribute 'reuse'
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.1.24030407
 starter 1.0
-Sun Apr 21 23:29:12 2024
+Mon Apr 22 23:16:08 2024
