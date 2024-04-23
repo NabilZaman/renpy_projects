@@ -1,70 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 69, in script
-    call screen action_select
-  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/script.rpy", line 36, in execute
-    screen action_select():
-  File "game/script.rpy", line 36, in execute
-    screen action_select():
-  File "game/script.rpy", line 37, in execute
-    imagemap:
-  File "game/script.rpy", line 37, in keywords
-    imagemap:
-  File "game/script.rpy", line 39, in <module>
-    hover button_idle
-NameError: name 'button_idle' is not defined
+  File "game/script.rpy", line 217, in script
+    call screen town_map_select(town_map_morning)
+  File "renpy/common/000statements.rpy", line 663, in execute_call_screen
+    args, kwargs = a.evaluate()
+  File "game/script.rpy", line 217, in <module>
+    call screen town_map_select(town_map_morning)
+NameError: name 'town_map_morning' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 69, in script
-    call screen action_select
+  File "game/script.rpy", line 217, in script
+    call screen town_map_select(town_map_morning)
   File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
     self.call("execute")
   File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1950, in call
     return renpy.statements.call(method, parsed, *args, **kwargs)
   File "C:\Program Files\renpy-8.2.1-sdk\renpy\statements.py", line 349, in call
     return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 3413, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2687, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2687, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/script.rpy", line 36, in execute
-    screen action_select():
-  File "game/script.rpy", line 36, in execute
-    screen action_select():
-  File "game/script.rpy", line 37, in execute
-    imagemap:
-  File "game/script.rpy", line 37, in keywords
-    imagemap:
-  File "game/script.rpy", line 39, in <module>
-    hover button_idle
-NameError: name 'button_idle' is not defined
+  File "renpy/common/000statements.rpy", line 663, in execute_call_screen
+    args, kwargs = a.evaluate()
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\parameter.py", line 477, in evaluate
+    value = renpy.python.py_eval(v, locals=scope)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 217, in <module>
+    call screen town_map_select(town_map_morning)
+NameError: name 'town_map_morning' is not defined
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.1.24030407
 starter 1.0
-Sun Apr 21 23:29:12 2024
+Mon Apr 22 20:04:24 2024

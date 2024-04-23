@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 41: expected a keyword argument or child statement.
-    (934, 172, 74, 74)
-    ^
+File "game/script.rpy", line 119: invalid syntax
+            else if self.can_freeze(): 
+                  ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sun Apr 21 23:28:50 2024
+Mon Apr 22 18:44:53 2024
