@@ -151,29 +151,8 @@ init python:
         school_map.add_time_slot(TOD.AFTERNOON, school_map_afternoon)
         school_map.add_time_slot(TOD.NIGHT, school_map_night)
 
-            
 
-    
-    # Define displayables
-
-    # bg_town = "background_concepts/city_overview3.PNG"
-    # bg_school = "background_concepts/school_campus_base.jpg"
-
-    # Define persistent values
-
-    # stats: dict[int, int] = {k : 0 for k in range(9)}
-
-    # # Define operations
-
-    # def setup(i: int) -> Callable[[], bool]:
-    #     def activate():
-    #         stats[i] += 1
-    #         renpy.notify(f"Your {i} stat is {stats[i]}!")
-    #         if stats[i] > 10:
-    #             return True
-    #     return activate
-
-
+# Define Screens
 screen town_map_select(time_slot_map):
     imagemap:
         # auto "background_concepts/city_overview3_%s.PNG"

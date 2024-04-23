@@ -1,18 +1,18 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 217, in script
+  File "game/script.rpy", line 196, in script
     call screen town_map_select(town_map_morning)
   File "renpy/common/000statements.rpy", line 663, in execute_call_screen
     args, kwargs = a.evaluate()
-  File "game/script.rpy", line 217, in <module>
+  File "game/script.rpy", line 196, in <module>
     call screen town_map_select(town_map_morning)
 NameError: name 'town_map_morning' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 217, in script
+  File "game/script.rpy", line 196, in script
     call screen town_map_select(town_map_morning)
   File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
     self.call("execute")
@@ -28,11 +28,11 @@ Full traceback:
     return py_eval_bytecode(code, globals, locals)
   File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 217, in <module>
+  File "game/script.rpy", line 196, in <module>
     call screen town_map_select(town_map_morning)
 NameError: name 'town_map_morning' is not defined
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.1.24030407
 starter 1.0
-Mon Apr 22 20:04:24 2024
+Mon Apr 22 20:15:53 2024
