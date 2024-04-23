@@ -3080,3 +3080,4078 @@ While running game code:
   File "game/script.rpy", line 217, in <module>
     call screen town_map_select(town_map_morning)
 NameError: name 'town_map_morning' is not defined
+Resetting cache.
+Early init took 14504.55s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 196, in script
+    call screen town_map_select(town_map_morning)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
+    self.call("execute")
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 663, in execute_call_screen
+    args, kwargs = a.evaluate()
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\parameter.py", line 477, in evaluate
+    value = renpy.python.py_eval(v, locals=scope)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 196, in <module>
+    call screen town_map_select(town_map_morning)
+NameError: name 'town_map_morning' is not defined
+
+While running game code:
+  File "game/script.rpy", line 196, in script
+    call screen town_map_select(town_map_morning)
+  File "renpy/common/000statements.rpy", line 663, in execute_call_screen
+    args, kwargs = a.evaluate()
+  File "game/script.rpy", line 196, in <module>
+    call screen town_map_select(town_map_morning)
+NameError: name 'town_map_morning' is not defined
+Resetting cache.
+Early init took 17014.09s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 199, in script
+    call screen town_map_select(town_map_morning)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
+    self.call("execute")
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 663, in execute_call_screen
+    args, kwargs = a.evaluate()
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\parameter.py", line 477, in evaluate
+    value = renpy.python.py_eval(v, locals=scope)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 199, in <module>
+    call screen town_map_select(town_map_morning)
+NameError: name 'town_map_morning' is not defined
+
+While running game code:
+  File "game/script.rpy", line 199, in script
+    call screen town_map_select(town_map_morning)
+  File "renpy/common/000statements.rpy", line 663, in execute_call_screen
+    args, kwargs = a.evaluate()
+  File "game/script.rpy", line 199, in <module>
+    call screen town_map_select(town_map_morning)
+NameError: name 'town_map_morning' is not defined
+Resetting cache.
+Early init took 17086.47s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 199, in script
+    call screen town_map_select(town_map_morning)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
+    self.call("execute")
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 3413, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2687, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2687, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 159, in execute
+    screen town_map_select(time_slot_map):
+  File "game/script.rpy", line 159, in execute
+    screen town_map_select(time_slot_map):
+  File "game/script.rpy", line 160, in execute
+    imagemap:
+  File "game/script.rpy", line 164, in execute
+    hotspot (1048, 160, 82, 85) action setup(1)
+  File "game/script.rpy", line 164, in keywords
+    hotspot (1048, 160, 82, 85) action setup(1)
+  File "game/script.rpy", line 164, in <module>
+    hotspot (1048, 160, 82, 85) action setup(1)
+NameError: name 'setup' is not defined
+
+While running game code:
+  File "game/script.rpy", line 199, in script
+    call screen town_map_select(town_map_morning)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 159, in execute
+    screen town_map_select(time_slot_map):
+  File "game/script.rpy", line 159, in execute
+    screen town_map_select(time_slot_map):
+  File "game/script.rpy", line 160, in execute
+    imagemap:
+  File "game/script.rpy", line 164, in execute
+    hotspot (1048, 160, 82, 85) action setup(1)
+  File "game/script.rpy", line 164, in keywords
+    hotspot (1048, 160, 82, 85) action setup(1)
+  File "game/script.rpy", line 164, in <module>
+    hotspot (1048, 160, 82, 85) action setup(1)
+NameError: name 'setup' is not defined
+Resetting cache.
+Early init took 17103.16s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 17142.50s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 17145.66s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 17177.48s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 205, in script
+    call screen school_map_select(school_map_morning)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
+    self.call("execute")
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 3413, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2687, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2687, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 169, in execute
+    screen school_map_select(time_slot_map):
+  File "game/script.rpy", line 169, in execute
+    screen school_map_select(time_slot_map):
+  File "game/script.rpy", line 170, in execute
+    imagemap:
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ui.py", line 1252, in _imagemap
+    ground = pick(ground, ("ground", "idle"), idle)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ui.py", line 1250, in pick
+    raise Exception("Could not find a %s image for imagemap." % name[0])
+Exception: Could not find a ground image for imagemap.
+
+While running game code:
+  File "game/script.rpy", line 205, in script
+    call screen school_map_select(school_map_morning)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 169, in execute
+    screen school_map_select(time_slot_map):
+  File "game/script.rpy", line 169, in execute
+    screen school_map_select(time_slot_map):
+  File "game/script.rpy", line 170, in execute
+    imagemap:
+Exception: Could not find a ground image for imagemap.
+Resetting cache.
+Early init took 17272.64s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 17281.83s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Early init took 17414.98s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 20647.33s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 166: reached end of line when expecting ':'.
+    for rect, act in 
+                     ^
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 20666.98s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 166: reached end of line when expecting ':'.
+    for rect, act in 
+                     ^
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 20800.76s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 20880.78s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 21081.36s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 21259.32s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 21264.64s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Early init took 21334.30s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 21388.69s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 149: expected '=' not found.
+    default general_market_event
+                                ^
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 21868.03s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 193, in script
+    python:
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 194, in <module>
+    renpy.execute_default_statement(True)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 4090, in execute_default_statement
+    i.execute_default(start)
+  File "game/script.rpy", line 149, in execute_default
+    default general_market_event = Event("")
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 149, in <module>
+    default general_market_event = Event("")
+TypeError: __init__() missing 1 required positional argument: 'label'
+
+While running game code:
+  File "renpy/common/00start.rpy", line 193, in script
+    python:
+  File "renpy/common/00start.rpy", line 194, in <module>
+    renpy.execute_default_statement(True)
+  File "game/script.rpy", line 149, in execute_default
+    default general_market_event = Event("")
+  File "game/script.rpy", line 149, in <module>
+    default general_market_event = Event("")
+TypeError: __init__() missing 1 required positional argument: 'label'
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 21883.15s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 21919.46s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 21969.34s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 161: invalid syntax
+    market_morning.
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 21988.95s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 22152.45s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Early init took 22327.62s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+Full traceback:
+  File "game/script.rpy", line 156, in script
+    init python:
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 161, in <module>
+    market_morning.add_event(general_market_event)
+NameError: name 'market_morning' is not defined
+
+While running game code:
+  File "game/script.rpy", line 156, in script
+    init python:
+  File "game/script.rpy", line 161, in <module>
+    market_morning.add_event(general_market_event)
+NameError: name 'market_morning' is not defined
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 22335.23s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 22391.16s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Early init took 22506.00s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+
+Full traceback:
+  File "game/script.rpy", line 194, in script
+    python:
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 199, in <module>
+    market_morning.add_event(general_market_event)
+  File "game/script.rpy", line 33, in add_event
+    self.event.append(event)
+AttributeError: 'Location' object has no attribute 'event'
+
+While running game code:
+  File "game/script.rpy", line 194, in script
+    python:
+  File "game/script.rpy", line 199, in <module>
+    market_morning.add_event(general_market_event)
+  File "game/script.rpy", line 33, in add_event
+    self.event.append(event)
+AttributeError: 'Location' object has no attribute 'event'
+Resetting cache.
+Early init took 22533.67s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Traceback (most recent call last):
+  File "renpy/common/00console.rpy", line 719, in run
+    result = renpy.python.py_eval(code)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+AttributeError: 'dict_values' object has no attribute '__next__'
+Traceback (most recent call last):
+  File "renpy/common/00console.rpy", line 719, in run
+    result = renpy.python.py_eval(code)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+TypeError: 'dict_values' object is not subscriptable
+Traceback (most recent call last):
+  File "renpy/common/00console.rpy", line 719, in run
+    result = renpy.python.py_eval(code)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+TypeError: 'dict_values' object is not an iterator
+Traceback (most recent call last):
+  File "renpy/common/00console.rpy", line 719, in run
+    result = renpy.python.py_eval(code)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+AttributeError: 'Event' object has no attribute 'name'
+Return stack (most recent call last):
+
+(anonymous) <game/script.rpy:221>
+Resetting cache.
+Early init took 23001.75s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 166: 'print' is not a keyword argument or valid child of the for statement.
+    print("Putting a hotspot at rect: " + str(rect))
+         ^
+
+File "game/script.rpy", line 178: 'print' is not a keyword argument or valid child of the for statement.
+    print("Putting a hotspot at rect: " + str(rect))
+         ^
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 23073.93s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 23103.86s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 23190.42s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Can't find a place to rollback to. Not rolling back.
+Putting a hotspot at location: Market
+Can't find a place to rollback to. Not rolling back.
+Can't find a place to rollback to. Not rolling back.
+Can't find a place to rollback to. Not rolling back.
+Can't find a place to rollback to. Not rolling back.
+Can't find a place to rollback to. Not rolling back.
+Can't find a place to rollback to. Not rolling back.
+Can't find a place to rollback to. Not rolling back.
+Can't find a place to rollback to. Not rolling back.
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 23311.67s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Traceback (most recent call last):
+  File "renpy/common/00console.rpy", line 719, in run
+    result = renpy.python.py_eval(code)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+AttributeError: 'Calendar' object has no attribute 'time'
+Resetting cache.
+Early init took 23435.56s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 23595.66s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 217: expected statement.
+    print("here we go")
+                       ^
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 23604.79s
+Loading error handling took 0.01s
+Loading script took 0.08s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+
+Full traceback:
+  File "game/script.rpy", line 217, in script
+    print "here we go"
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 1493, in say
+    who(what, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\minstore.py", line 80, in print
+    _print(*args, **kwargs)
+TypeError: 'interact' is an invalid keyword argument for print()
+
+While running game code:
+  File "game/script.rpy", line 217, in script
+    print "here we go"
+TypeError: 'interact' is an invalid keyword argument for print()
+Resetting cache.
+Early init took 23650.58s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 23703.44s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 23713.71s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Putting a hotspot at location: Market
+
+Full traceback:
+  File "game/script.rpy", line 215, in script
+    "After this there will be an interactive town map with [len(town_map_morning.locations)] locations"
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 1493, in say
+    who(what, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\character.py", line 1379, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\character.py", line 1293, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\character.py", line 1273, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\substitutions.py", line 368, in substitute
+    s = interpolate(s, kwargs) # type: ignore
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\substitutions.py", line 310, in __getitem__
+    raise NameError("Name '{}' is not defined.".format(key))
+NameError: Name 'len' is not defined.
+
+While running game code:
+  File "game/script.rpy", line 215, in script
+    "After this there will be an interactive town map with [len(town_map_morning.locations)] locations"
+NameError: Name 'len' is not defined.
+Resetting cache.
+Early init took 23734.95s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 23781.82s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 23816.72s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 23991.89s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 169: 'state' is not a keyword argument or valid child of the hotspot statement.
+    hotspot (1048, 160, 82, 85) state.setup_map_interaction(market_morning)
+                                     ^
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 24013.04s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 24127.81s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 24164.16s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 24367.99s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+
+Full traceback:
+  File "game/script.rpy", line 225, in script
+    call screen town_map_select(town_map_morning)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
+    self.call("execute")
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 3413, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 3201, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 1174, in event
+    return handle_click(self.clicked)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 1095, in handle_click
+    rv = run(action)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+  File "game/script.rpy", line 119, in interact
+    event.trigger()
+TypeError: trigger() takes 0 positional arguments but 1 was given
+
+While running game code:
+  File "game/script.rpy", line 225, in script
+    call screen town_map_select(town_map_morning)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 119, in interact
+    event.trigger()
+TypeError: trigger() takes 0 positional arguments but 1 was given
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+
+Full traceback:
+  File "game/script.rpy", line 225, in script
+    call screen town_map_select(town_map_morning)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
+    self.call("execute")
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 3413, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 3201, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 1174, in event
+    return handle_click(self.clicked)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 1095, in handle_click
+    rv = run(action)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+  File "game/script.rpy", line 119, in interact
+    event.trigger()
+TypeError: trigger() takes 0 positional arguments but 1 was given
+
+While running game code:
+  File "game/script.rpy", line 225, in script
+    call screen town_map_select(town_map_morning)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 119, in interact
+    event.trigger()
+TypeError: trigger() takes 0 positional arguments but 1 was given
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 24511.48s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 24543.31s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 24587.18s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 24648.02s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 24676.82s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 24684.49s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 24698.20s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 24779.71s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 24961.12s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 25052.22s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 25067.54s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 25098.04s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 25123.86s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 25158.79s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 25186.07s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 25193.75s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 25216.73s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 25310.30s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+
+Full traceback:
+  File "game/script.rpy", line 229, in script
+    call screen town_map_select(town_map_morning)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
+    self.call("execute")
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 3413, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 3201, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 1174, in event
+    return handle_click(self.clicked)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 1095, in handle_click
+    rv = run(action)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+  File "game/script.rpy", line 121, in interact
+    event = location.pop_next_event()
+  File "game/script.rpy", line 38, in pop_next_event
+    if next_event.reuse:
+AttributeError: 'Event' object has no attribute 'reuse'
+
+While running game code:
+  File "game/script.rpy", line 229, in script
+    call screen town_map_select(town_map_morning)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 121, in interact
+    event = location.pop_next_event()
+  File "game/script.rpy", line 38, in pop_next_event
+    if next_event.reuse:
+AttributeError: 'Event' object has no attribute 'reuse'
+Resetting cache.
+Early init took 25333.14s
+Loading error handling took 0.02s
+Loading script took 0.09s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 25384.98s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Resetting cache.
+Early init took 26582.08s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 30519.00s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 30555.28s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 30903.56s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 31048.36s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 192: expected 'image_name_component' not found.
+    image 
+          ^
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 31195.72s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.02s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 31239.53s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nabil\\AppData\\Roaming/RenPy/backups\\starter':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.750000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 7900 XT'
+Version: b'4.6.0 Compatibility Profile Context 23.20.44.240306'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3360, 1890) drawable=(3360, 1890)
+Maximum texture size: 4096x4096
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market
+Putting a hotspot at location: Market

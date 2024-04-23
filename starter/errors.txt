@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 119: invalid syntax
-            else if self.can_freeze(): 
-                  ^
+File "game/script.rpy", line 192: expected 'image_name_component' not found.
+    image 
+          ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Mon Apr 22 18:44:53 2024
+Tue Apr 23 00:51:37 2024
