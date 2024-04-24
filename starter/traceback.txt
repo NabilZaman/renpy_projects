@@ -1,84 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 394, in script call
-    call to_town(None)
-  File "game/script.rpy", line 359, in script
-    python:
-  File "game/script.rpy", line 364, in <module>
-    state.display_map()
-  File "game/script.rpy", line 140, in display_map
-    renpy.call_screen(self.cur_map.screen, self.get_cur_time_map())
-  File "game/script.rpy", line 58, in off_hover
-    renpy.hide_screen("location_tooltip")
-  File "game/script.rpy", line 222, in execute
-    screen location_tooltip(location, display_position):
-  File "game/script.rpy", line 222, in execute
-    screen location_tooltip(location, display_position):
-  File "game/script.rpy", line 223, in execute
-    frame:
-  File "game/script.rpy", line 223, in keywords
-    frame:
-  File "game/script.rpy", line 225, in <module>
-    pos pos
-NameError: name 'pos' is not defined
+  File "game/script.rpy", line 6, in script call
+    call setup
+  File "game/script.rpy", line 6, in script call
+    call setup
+ScriptError: could not find label 'setup'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 394, in script call
-    call to_town(None)
-  File "game/script.rpy", line 359, in script
-    python:
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 364, in <module>
-    state.display_map()
-  File "game/script.rpy", line 140, in display_map
-    renpy.call_screen(self.cur_map.screen, self.get_cur_time_map())
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 3413, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 3196, in interact_core
-    rv = renpy.display.focus.mouse_handler(ev, x, y)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\focus.py", line 610, in mouse_handler
-    return change_focus(new_focus, default=default)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\focus.py", line 529, in change_focus
-    current.unfocus(default=default)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 1029, in unfocus
-    run(self.unhovered)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\behavior.py", line 395, in run
-    return action(*args, **kwargs)
-  File "game/script.rpy", line 58, in off_hover
-    renpy.hide_screen("location_tooltip")
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 1451, in hide_screen
-    sls.remove(layer, screen.tag)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\scenelists.py", line 594, in remove
-    self.hide_or_replace(layer, remove_index, prefix)
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\scenelists.py", line 500, in hide_or_replace
-    if not oldsle.displayable._handles_event(prefix):
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 533, in _handles_event
-    self.update()
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/script.rpy", line 222, in execute
-    screen location_tooltip(location, display_position):
-  File "game/script.rpy", line 222, in execute
-    screen location_tooltip(location, display_position):
-  File "game/script.rpy", line 223, in execute
-    frame:
-  File "game/script.rpy", line 223, in keywords
-    frame:
-  File "game/script.rpy", line 225, in <module>
-    pos pos
-NameError: name 'pos' is not defined
+  File "game/script.rpy", line 6, in script call
+    call setup
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1416, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+  File "game/script.rpy", line 6, in script call
+    call setup
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'setup'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.1.24030407
 starter 1.0
-Wed Apr 24 12:33:12 2024
+Wed Apr 24 14:12:34 2024
