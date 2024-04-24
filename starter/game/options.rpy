@@ -227,6 +227,3 @@ init python:
 
 # define build.itch_project = "renpytom/test-project"
 
-# Custom options
-define config.autoreload = False
-
