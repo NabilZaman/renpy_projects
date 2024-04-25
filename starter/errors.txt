@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 231: 'margin' is not a keyword argument or valid child of the vbox statement.
-    margin (10, 10)
-          ^
+File "game/screens/stats.rpy", line 12: The has statement is not allowed here.
+    has vbox
+       ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Wed Apr 24 12:59:08 2024
+Thu Apr 25 14:52:03 2024

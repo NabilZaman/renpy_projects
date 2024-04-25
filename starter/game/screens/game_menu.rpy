@@ -27,6 +27,8 @@ screen game_menu(title):
 
             textbutton _("Save") action ShowMenu("save")
 
+            textbutton _("Stats") action ShowMenu("stats_menu")
+
         textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("preferences")
