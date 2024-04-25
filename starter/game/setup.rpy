@@ -42,6 +42,7 @@ label setup:
         state.freeze_capacity = 2
 
         state.set_map(school_map) # The first map will be the school map.
+        state.event_schedule = plot_events
 
 
     return

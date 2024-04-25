@@ -5,10 +5,6 @@ label start:
 
     call setup
 
-    "Here's the first statement"
-
-    "After this there will be an interactive town map"
-
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
