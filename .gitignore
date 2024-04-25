@@ -154,4 +154,3 @@ cython_debug/
 *.rpyb
 *.rpyc
 *.rpymc
-starter/log.txt
