@@ -1,27 +1,27 @@
 
+# Setup Town map
 default town_map = Map("Town", "town_map_select")
 default town_map_morning = TimeSlotMap("background_concepts/city_overview3_%s.PNG")
 default town_map_afternoon = TimeSlotMap("background_concepts/city_overview3_%s.PNG")
 default town_map_night = TimeSlotMap("background_concepts/city_overview3_%s.PNG")
 
+# Setup School map
 default school_map = Map("Campus", "school_map_select")
 default school_map_morning = TimeSlotMap("background_concepts/school_campus_%s.jpg")
 default school_map_afternoon = TimeSlotMap("background_concepts/school_campus_%s.jpg")
 default school_map_night = TimeSlotMap("background_concepts/school_campus_%s.jpg")
 
-default market_morning = Location("Market", "market_background")
-default general_market_event = Event("market_event", reuse=True)
+# Setup locations and events
+default market_morning = Location("Market", "market_background", events=market_events)
 default campus_entrance = Location("School Gates", "color_black")
-default school_transition = Event("to_campus", takes_time=False,    reuse=True)
 default campus_exit = Location("Path to Town", "color_black")
-default town_transition = Event("to_town", takes_time=False, reuse=True)
+
 
 default state = StateManager()
 
 label setup:
     python:
         # Setup Locations
-        market_morning.add_event(general_market_event)
         campus_entrance.add_event(school_transition)
         campus_exit.add_event(town_transition)
 
@@ -40,5 +40,8 @@ label setup:
         school_map.add_location_for_times((469, 818, 67, 77), campus_exit, (TOD.MORNING, TOD.AFTERNOON, TOD.NIGHT))
 
         state.freeze_capacity = 2
+
+        state.set_map(school_map) # The first map will be the school map.
+
 
     return
