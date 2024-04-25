@@ -17,7 +17,7 @@ label start:
 
     # show screen calendar_display()
 
-    call to_town(None)
+    $ state.advance_state()
 
     "That concludes the interactive portion of the game."
 

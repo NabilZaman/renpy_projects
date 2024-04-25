@@ -1,14 +1,31 @@
 
-init python:
+init -100 python:
     from typing import Callable, Iterable
 
     Rectangle = tuple[int, int, int, int]
+    EventDT = tuple[int, int]
+
+
+    def always_true(x):
+        return True
+
 
     class Event:
-        def __init__(self, label: str, takes_time=True, reuse=False):
+        def __init__(self, label: str, takes_time=True, reuse=False, priority=0,
+                        condition: Callable = None):
             self.label = label
             self.takes_time = takes_time
             self.reuse = reuse
+            # The priority determines in what order events will occur.
+            # Events with higher numeric priorities come before lower ones.
+            # Ties broken arbitrarily (not random)
+            self.priority = priority
+            self.condition = condition
+            if self.condition is None:
+                self.condition = always_true
+
+        def allowed(self, state: "StateManager") -> bool:
+            return self.condition(state)
 
         def trigger(self):
             context = EventContext(self)
@@ -25,24 +42,44 @@ init python:
             global state
             state.post_event(self)
 
+
     class Location:
-        def __init__(self, name: str, background: str):
+        def __init__(self, name: str, background: str, events: list[Event] = None):
             self.name = name
             self.background = background
-            self.events = []
+            self.events = [] if events is None else events
+            # self.sort_events()
+
+        def sort_events(self) -> None:
+            self.events.sort(key=lambda e: e.priority)
 
         def add_event(self, event: Event) -> None:
             self.events.append(event)
+            self.sort_events()
+
+        def available_events(self) -> list[Event]:
+            global state
+            return [e for e in self.events if e.allowed(state)]
+
+        def find_next_event_index(self) -> int:
+            global state
+            # loop "backwards" as that is our priority order
+            for i in range(len(self.events)-1, -1, -1):
+                if self.events[i].allowed(state):
+                    # renpy.notify(f"{self.events[i].label} is allowed")
+                    return i # return the first index we find
+            return None
 
         def pop_next_event(self) -> Event:
             if self.available:
-                next_event = self.events.pop()
+                index = self.find_next_event_index()
+                next_event = self.events.pop(index)
                 if next_event.reuse:
                     self.add_event(next_event)
                 return next_event
 
         def available(self):
-            return bool(self.events)
+            return bool(self.available_events)
 
         def on_hover(self):
             renpy.show_screen("location_tooltip", self, renpy.get_mouse_pos())
@@ -83,6 +120,10 @@ init python:
                     self.day += 1
                 self.time_of_day = next_time
 
+        @property
+        def current(self) -> EventDT:
+            return (self.day, self.time_of_day)
+
 
     class TimeSlotMap:
         """An instance of a map at a particular time slot"""
@@ -112,14 +153,41 @@ init python:
                 self.get_map_for_time(tod).add_location(rect, location)
 
 
+    class EventSchedule:
+        def __init__(self):
+            self._events: dict[EventDT, list[Event]] = defaultdict(list)
+            self.seen_cursor = 0
+
+        def schedule_event(self, when: EventDT, event: Event):
+            self._events[when].append(event)
+
+        def fetch_next_event(self, when: EventDT) -> Event:
+            next_event = None
+            if len(self._events[when]) > self.seen_cursor:
+                next_event = self._events[when][self.seen_cursor]
+                self.seen_cursor += 1
+            else:
+                self.seen_cursor = 0
+            return next_event
+
+
     class StateManager:
         def __init__(self):
             self.cal = Calendar()
             self.cur_map: Map = None
+            self.event_schedule = EventSchedule()
             self.stats = {}
             self.money = 100
             self.freeze_capacity = 0
             self.freezes_consumed = 0
+            self.karma = 0
+
+        def advance_state(self) -> None:
+            next_event = self.event_schedule.fetch_next_event(self.cal.current)
+            if next_event:
+                next_event.trigger()
+            else:
+                self.display_map()
 
         def get_cur_time_map(self) -> TimeSlotMap:
             if self.cur_map is None:
@@ -149,26 +217,23 @@ init python:
                 # If the locations is somehow unavailable, don't do anything, user needs to pick another location
                 if location.available():
                     event = location.pop_next_event()
+                    renpy.scene()
                     renpy.show(location.background)
                     location.off_hover()
                     event.trigger()
-                    if event.takes_time:
-                        self.cal.advance()
-                    self.display_map()
             return interact
 
         def post_event(self, context):
-                if context.event.takes_time:
-                    self.cal.advance()
-                self.display_map()
+            if context.event.takes_time:
+                self.cal.advance()
+            self.display_map()
 
 
         def freeze(self) -> None:
             renpy.restart_interaction()
-            # If already frozen, unfreeze
             if self.is_frozen():
                 self.do_unfreeze()
-            elif self.can_freeze(): # otherwise, if we can freeze, do
+            elif self.can_freeze():
                 self.do_freeze()
             else: # else, we can't freeze right now
                 # display some warning saying no freezes available, or just deactivate the freeze button
@@ -192,3 +257,11 @@ init python:
 
         def setup_time_freeze_interaction(self) -> Callable[[], None]:
             return self.freeze
+
+    def create_contained_event(event_container: list, label: str, takes_time=True, reuse=False, priority=0,
+                                condition: Callable[[StateManager], bool] = None):
+        event = Event(label, takes_time, reuse, priority, condition)
+        event_container.append(event)
+
+
+define plot_schedule = EventSchedule()

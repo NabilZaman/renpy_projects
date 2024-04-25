@@ -1,26 +1,59 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 6, in script call
-    call setup
-  File "game/script.rpy", line 6, in script call
-    call setup
-ScriptError: could not find label 'setup'.
+  File "renpy/common/00start.rpy", line 216, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 531, in script
+    python hide:
+  File "renpy/common/00start.rpy", line 216, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 531, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 531, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 542, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+AttributeError: Can't get attribute 'condition' on <renpy.python.StoreModule object at 0x00000000047b1220>
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 6, in script call
-    call setup
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1416, in execute
-    rv = renpy.game.context().call(label, return_site=self.next.name)
-  File "game/script.rpy", line 6, in script call
-    call setup
-  File "C:\Program Files\renpy-8.2.1-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'setup'.
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\main.py", line 635, in main
+    run(restart)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\main.py", line 145, in run
+    renpy.execution.run_context(True)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\execution.py", line 955, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 216, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 531, in script
+    python hide:
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "renpy/common/00start.rpy", line 216, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 531, in script
+    python hide:
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 531, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 542, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\loadsave.py", line 828, in load
+    roots, log = loads(log_data)
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\compat\pickle.py", line 100, in loads
+    return load(io.BytesIO(s))
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\compat\pickle.py", line 97, in load
+    return up.load()
+  File "C:\Program Files\renpy-8.2.1-sdk\renpy\compat\pickle.py", line 93, in find_class
+    return super().find_class(module, name)
+AttributeError: Can't get attribute 'condition' on <renpy.python.StoreModule object at 0x00000000047b1220>
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.1.24030407
 starter 1.0
-Wed Apr 24 14:12:34 2024
+Wed Apr 24 22:32:01 2024
