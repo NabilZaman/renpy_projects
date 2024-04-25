@@ -107,8 +107,8 @@ init -100 python:
 
     class Calendar:
         def __init__(self):
-            self.day = 1
-            self.time_of_day = TOD.MORNING
+            self.day = 0
+            self.time_of_day = TOD.NIGHT
             self.frozen = False
 
         def advance(self) -> None:
@@ -226,8 +226,7 @@ init -100 python:
         def post_event(self, context):
             if context.event.takes_time:
                 self.cal.advance()
-            self.display_map()
-
+            self.advance_state()
 
         def freeze(self) -> None:
             renpy.restart_interaction()
