@@ -12,7 +12,7 @@ default school_map_afternoon = TimeSlotMap("background_concepts/school_campus_%s
 default school_map_night = TimeSlotMap("background_concepts/school_campus_%s.jpg")
 
 # Setup locations and events
-default market_morning = Location("Market", "market_background", events=market_events)
+default market_morning = Location("Market", "bg market", events=market_events)
 default campus_entrance = Location("School Gates", "color_black")
 default campus_exit = Location("Path to Town", "color_black")
 
@@ -42,7 +42,7 @@ label setup:
         state.freeze_capacity = 2
 
         state.set_map(school_map) # The first map will be the school map.
-        state.event_schedule = plot_events
+        state.event_schedule = plot_schedule
 
 
     return

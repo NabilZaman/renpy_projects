@@ -156,6 +156,7 @@ init -100 python:
     class EventSchedule:
         def __init__(self):
             self._events: dict[EventDT, list[Event]] = defaultdict(list)
+            self.last_dt: EventDT = None
             self.seen_cursor = 0
 
         def schedule_event(self, when: EventDT, event: Event):
@@ -163,11 +164,13 @@ init -100 python:
 
         def fetch_next_event(self, when: EventDT) -> Event:
             next_event = None
+            if self.last_dt != when:
+                self.last_dt = when
+                self.seen_cursor = 0
             if len(self._events[when]) > self.seen_cursor:
                 next_event = self._events[when][self.seen_cursor]
                 self.seen_cursor += 1
-            else:
-                self.seen_cursor = 0
+            self.last_dt = when
             return next_event
 
 
