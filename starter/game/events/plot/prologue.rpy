@@ -11,12 +11,12 @@ label prologue0(callback):
 
     show bg carriage night with dissolve
 
-    "MC" "Hmm? Oh, yeah I suppose I will be."
+    mc.says "Hmm? Oh, yeah I suppose I will be."
 
     "Driver" "Pretty unusual, having a pick-up like this.
     Not that it's my first time carrying a student up there or anything."
 
-    "MC" "Really?"
+    mc.says "Really?"
 
     "It was hard focusing on what the driver was saying when so much is happening all around the carriage."
 
@@ -25,17 +25,21 @@ label prologue0(callback):
     "Driver" "It's just, you know, odd for one of you to be arriving on your own like this.
     Usually students will have their own retinue. And... more bags, you know?"
 
-    "MC" "Mmhmm, yeah."
+    mc.says "Mmhmm, yeah."
 
     "A child running right by us is carrying a stick rapidly changing in color with a stream of sparks flying off the end."
 
     "Driver" "So... you must be one them uh, 'special cases', huh?"
 
-    "MC" "Might be."
+    mc.says "Might be."
 
     "Special what?"
 
-    "There were so many wonders lining the streets. A shop has a sign that spins on its own
+    "Driver" "Too right, well, none of my business, that."
+
+    "Whatever the driver was thinking, they got quiet after that, which let me focus on everything around us."
+
+    "There were so many wonders on the street. A shop has a sign that spins on its own
     and reads a different slogan with each revolution."
 
     "And there! A woman has her baby in a carriage that seems to be pushing itself."
@@ -44,11 +48,14 @@ label prologue0(callback):
 
     "The driver seemed to notice me gaping out the windows with a grin."
 
+    "I continue staring, nearly hanging out the window at one point to watch a fountain erupting with
+    what appear to be flower petals that went off jus as we rode past."
+
     "Driver" "Well, I'm sure you'll be learning a lot up there. And we're not too far now."
 
     show bg school approach night with dissolve
 
-    "And as we round the bend on the street I finally get a proper view at our destination:
+    "As we round the bend on the street I finally get a proper view at our destination:
     The Magical Institute of Qyburn"
 
     "Home to the most advanced magical research in the world."
@@ -71,7 +78,7 @@ label .welcome:
 
     "Administrator" "Welcome to the institute! We hope your journey was a pleasant one?"
 
-    "MC" "Oh, it \u2014"
+    mc.says "Oh, it \u2014"
 
     "Administrator" "May I see your invitation?"
 
@@ -106,7 +113,7 @@ label .welcome:
     """Practically dumping me there, they finally let me go, and briskly walk away without
     ever letting me get a word in.
 
-    Which was well enough. They were right that I was exhausted.
+    Which is well enough. They were right that I was exhausted.
 
     Entering my new room, I drop my bag to the floor, not bothering to unpack,
     and let myself drop into the bed.
@@ -136,37 +143,146 @@ label prologue1(callback):
 
     show bg black with dissolve
 
-    "The next morning, I wake to the sound of an explosion."
+    play sound "effects/explosion.wav"
 
-    # play sound effect
+    "The next morning, I wake to the sound of an explosion."
 
     show bg dorm hallway morning with dissolve
 
-    "I rush out of my room and into the hall"
+    "I rush out of my room and into the hall, still dressed in my traveling clothes from last night."
 
-    "MC" "What happened?!"
+    show wind_girl
 
-    show wind_girl with easeinright
+    wg.says "Shit!"
 
-    "???" "Nothing happened. You never saw me."
+    "I find another student standing in a doorway with the door dangling on a single hinge."
+
+    mc.says "What happened? Are you alright?"
+
+    wg.says "Yeah, it's... none of your business. You better not tell anyone about this, OK?"
+
+    mc.says "Sure, I guess? Are you sure you don't need any help?"
+
+    """By this point I've made my way in front of the room with the broken door.
+
+    I try to peek around her to get a better look inside the room.
+
+    I don't see any flames or major signs of destruction,
+    but a lot of things are strewn across the floor along with a lot of shattered glass.
+    """
+
+    wg.says ""
 
     hide wind_girl with easeoutleft
 
-    "What is even going on here?"
+    # "What is even going on here?"
 
-    show wind_girl with easeinleft
+    # show wind_girl with easeinleft
 
-    "???" "And just so we're abundantly clear, you're not a snitch, are you?"
+    # "???" "And just so we're abundantly clear, you're not a snitch, are you?"
 
-    "MC" "No, ma'am."
+    # "MC" "No, ma'am."
 
-    "???" "Good."
+    # "???" "Good."
 
-    hide wind_girl with easeoutleft
+    # hide wind_girl with easeoutleft
 
     "..."
 
+    call .follow_wind_girl
+
+
     $ callback()
+
+label .wind_girl_reveal:
+    mc.says "So what happened in here?"
+
+    wg.says "I messed up, OK?"
+
+    mc.says "You did this? How?"
+
+    wg.says """I was just... breathing.
+    I do breathing exercises in the morning.
+
+    Just in.
+
+    And out.
+
+    It's just me and my breath. Flowing into my lungs, then back out again.
+    It helps me... work through my anxieties, center myself.
+
+    And sometimes, it feels like the wind joins me. Usually it's empowering. But today...
+
+    I'm just not used to spending a lot of time inside. It's so stiffling.
+
+    I don't really know what I did, but the next thing I knew the window burst open.
+    """
+
+    mc.says "Wow, that's amazing."
+
+    wg.says "Sure, amazing. I've trashed my room and damaged school property and it's not even the
+    first day of classes yet. "
+
+label .follow_wind_girl:
+    "I do my best to follow the mysterious student, but I don't really know my way around
+    the dorm yet."
+
+    "I turn the corner and notice that a door leading out is swinging shut."
+
+    "As I step outside, she's ready for me and has me pushed against the wall, her fists around my collar."
+
+    wg.says "Who are you and why are you following me?"
+
+    $ wg.affection -= 1
+
+    "Ruh roh!"
+
+    return
+
+label .administrators_discssing_special_cases:
+    "Admin1" "We have many prospects this year that show a lot of promise."
+
+    "Admin2" "Indeed. And 4 chosen by the guilds, twice as many as last year."
+
+    "Admin1" "How are the guild prospects getting on?"
+
+    "Admin2" "Excellent. The one chosen by the navigator's guild is especially powerful.
+    She nearly evacuated her dorm room of air without lifting a finger. Caused quite the stir."
+
+    "Admin1" "Hah! Wonderful. I have heard the artificers guild's chosen are both brilliant
+    young minds."
+
+    "Admin2" "An understatement. They have no understanding of basic artifabrication theory,
+    and so they have no common sense to hold them back. They don't hesitate to achieve the impossible."
+
+    "Admin2" "Give them a few years and they'll shake the world."
+
+    "Admin1" "I'm sure their time here will be elightening for everyone involved.
+    And what of the last one, the adventurers guild's chosen? I'm not sure I've heard much of them."
+
+    "Admin2" "Ah yes, well that one is a bit of a curiosity."
+
+    "Admin1" "Oh? How so?"
+
+    "Admin2" "It's just to say... they so far seem completely unremarkable."
+
+    "Admin1 frowns, as if they just saw someone urinating on their couch."
+
+    "Admin1" "Well that can't be right. What did the guild include in their profile? What was the
+    rationale for admission?"
+
+    "Admin2" "They were the child involved in the Durindale incident."
+
+    "Admin1" "Oh. I see. Then that is curious. And they haven't demonstrated any innate...
+    talents? Tendencies? Anything that would shed some light on the matter?"
+
+    "Admin2" "As I said, unremarkable. Which is not to say they are an idiot.
+    Just they scored in 52% percentile in the qualifying exam."
+
+    "Admin1" "How disappointing. But still, some mysteries run deeper than others.
+    And this one especially has the potential to change everything."
+
+
 
 init python:
     plot_schedule.schedule_event((1, TOD.MORNING), Event("prologue1"))

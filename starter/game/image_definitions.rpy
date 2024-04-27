@@ -1,6 +1,7 @@
 
 
 # general images
+image color_white = "#fff"
 image color_mauve = "#88f"
 image color_black = "#000"
 

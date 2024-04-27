@@ -35,14 +35,14 @@ screen powers_display():
         xalign 0.0
         yalign 0.0
         offset (10, 10)
-        text "Time Freezes Left: ":
+        spacing 6
+        text "Time Freezes Left:":
             size 24
             outlines [(1, "#000", 0, 0)]
         for i in range(state.freezes_available):
             frame:
                 background "color_black"
-                xysize(25, 25)
-                margin (3,3)
+                xysize(21, 21)
                 yalign 0.5
                 frame:
                     background "color_mauve"

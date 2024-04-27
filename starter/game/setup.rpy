@@ -13,8 +13,8 @@ default school_map_night = TimeSlotMap("background_concepts/school_campus_%s.jpg
 
 # Setup locations and events
 default market_morning = Location("Market", "bg market", events=market_events)
-default campus_entrance = Location("School Gates", "color_black")
-default campus_exit = Location("Path to Town", "color_black")
+default campus_entrance = Location("School Gates", "bg black")
+default campus_exit = Location("Path to Town", "bg black")
 
 
 default state = StateManager()

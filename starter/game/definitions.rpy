@@ -5,11 +5,6 @@ init -100 python:
     Rectangle = tuple[int, int, int, int]
     EventDT = tuple[int, int]
 
-
-    def always_true(x):
-        return True
-
-
     class Event:
         def __init__(self, label: str, takes_time=True, reuse=False, priority=0,
                         condition: Callable = None):
@@ -264,7 +259,6 @@ init -100 python:
                                 condition: Callable[[StateManager], bool] = None):
         event = Event(label, takes_time, reuse, priority, condition)
         event_container.append(event)
-
 
 define plot_schedule = EventSchedule()
 
