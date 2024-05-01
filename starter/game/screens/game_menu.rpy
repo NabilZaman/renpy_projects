@@ -29,6 +29,10 @@ screen game_menu(title):
 
             textbutton _("Stats") action ShowMenu("stats_menu")
 
+            textbutton _("Characters") action ShowMenu("characters_menu")
+
+            textbutton _("Mysteries") action ShowMenu("mysteries_menu")
+
         textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("preferences")
