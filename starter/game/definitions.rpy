@@ -39,11 +39,17 @@ init -100 python:
 
 
     class Location:
-        def __init__(self, name: str, background: str, events: list[Event] = None):
+        def __init__(self, name: str, background: str, events: list[Event] = None,
+                        warning_msg='', enabled=True):
             self.name = name
             self.background = background
             self.events = [] if events is None else events
-            # self.sort_events()
+            self.warning_msg = warning_msg
+            self.enabled = enabled
+            self.sort_events()
+
+        def enable(self) -> None:
+            self.enabled = True
 
         def sort_events(self) -> None:
             self.events.sort(key=lambda e: e.priority)
@@ -74,7 +80,13 @@ init -100 python:
                 return next_event
 
         def available(self):
-            return bool(self.available_events)
+            return self.enabled and bool(self.available_events())
+
+        def has_warning(self):
+            return bool(self.warning_msg)
+
+        def selectable(self):
+            return self.available() or self.has_warning()
 
         def on_hover(self):
             renpy.show_screen("location_tooltip", self, renpy.get_mouse_pos())
@@ -168,6 +180,17 @@ init -100 python:
             self.last_dt = when
             return next_event
 
+    class Flags:
+        """ Used to manage /boolean/ flags in the game. """
+        def __init__(self):
+            self._flags: dict[str, bool] = defaultdict(bool)
+
+        def get(self, name: str):
+            return self._flags[name]
+
+        def set(self, name: str, value: bool) -> None:
+            self._flags[name] = value
+
 
     class StateManager:
         def __init__(self):
@@ -179,6 +202,7 @@ init -100 python:
             self.freeze_capacity = 0
             self.freezes_consumed = 0
             self.karma = 0
+            self.flags = Flags()
 
         def advance_state(self) -> None:
             next_event = self.event_schedule.fetch_next_event(self.cal.current)
@@ -212,13 +236,16 @@ init -100 python:
 
         def setup_map_interaction(self, location: Location) -> Callable[[], bool]:
             def interact():
-                # If the locations is somehow unavailable, don't do anything, user needs to pick another location
                 if location.available():
                     event = location.pop_next_event()
                     renpy.scene()
                     renpy.show(location.background)
                     location.off_hover()
                     event.trigger()
+                else: # display the warning
+                    renpy.show_screen('warning_dialog', location.warning_msg)
+                    renpy.restart_interaction()
+
             return interact
 
         def post_event(self, context):
@@ -254,6 +281,12 @@ init -100 python:
 
         def setup_time_freeze_interaction(self) -> Callable[[], None]:
             return self.freeze
+
+        def change_money(self, delta: int) -> None:
+            self.money += delta
+
+        def change_karma(slef, delta: int) -> None:
+            self.karma += delta
 
     def create_contained_event(event_container: list, label: str, takes_time=True, reuse=False, priority=0,
                                 condition: Callable[[StateManager], bool] = None):

@@ -1,4 +1,7 @@
 
+define character_menu_portrait_width = 400
+define character_menu_portrait_height = 600
+
 screen characters_menu():
 
     tag menu
@@ -19,7 +22,7 @@ screen characters_menu():
             # character select up top
             hbox:
                 spacing 10
-                for c in major_characters:
+                for c in met_characters(Significance.MAJOR):
                     textbutton c.name():
                         xysize (100, 30)
                         action NullAction()
@@ -30,9 +33,9 @@ screen characters_menu():
                 #first is a character portrait
                 frame:
                     background "color_white"
-                    xysize (280, 400)
+                    xysize (character_menu_portrait_width, character_menu_portrait_height)
                     frame:
-                        background proportional_scale(c.image, 280, 400)
+                        background proportional_scale(c.image, character_menu_portrait_width, character_menu_portrait_height)
                 #Then the character stats
                 frame:
                     has vbox

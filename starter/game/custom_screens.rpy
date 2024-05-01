@@ -8,7 +8,7 @@ screen location_tooltip(location, display_pos):
         vbox:
             text location.name size 18
 
-screen calendar_display():
+screen calendar_display(interactable=True):
     vbox:
         xalign 1.0
         yalign 0.0
@@ -16,7 +16,7 @@ screen calendar_display():
         imagebutton:
             idle "icons/time_icon_[TOD.TIME_NAMES[state.cal.time_of_day]].jpg"
             xalign 0.5
-            action state.freeze
+            action (state.freeze if interactable else NullAction())
         text "[TOD.TIME_NAMES[state.cal.time_of_day]]":
             size 28
             xalign 0.5
@@ -75,29 +75,50 @@ screen hud_screen():
     use location_display
     use powers_display
 
-screen town_map_select(time_slot_map):
+screen slim_hud_screen():
+    use calendar_display
+    use money_display
+
+screen map_select(time_slot_map):
     imagemap:
         auto time_slot_map.background
 
         for rect, loc in time_slot_map.locations.items():
             hotspot rect:
                 action state.setup_map_interaction(loc)
-                hovered loc.on_hover
-                unhovered loc.off_hover
-                sensitive loc.available()
-
+                sensitive loc.selectable()
+            if loc.selectable():
+                # if the rect is too low, draw the text on top
+                if (rect[1] + rect[3]) > (config.screen_height - 100):
+                    text loc.name:
+                        yanchor 1.0
+                        xanchor 0.5
+                        ypos rect[1]
+                        xpos int(rect[0] + rect[2] / 2)
+                        outlines [(1, "#000", 0, 0)]
+                else:
+                    text loc.name:
+                        yanchor 0.0
+                        xanchor 0.5
+                        ypos rect[1] + rect[3]
+                        xpos int(rect[0] + rect[2] / 2)
+                        outlines [(1, "#000", 0, 0)]
     use hud_screen
 
-screen school_map_select(time_slot_map):
-    imagemap:
-        auto time_slot_map.background
-
-        for rect, loc in time_slot_map.locations.items():
-            hotspot rect:
-                action state.setup_map_interaction(loc)
-                hovered loc.on_hover
-                unhovered loc.off_hover
-                sensitive loc.available()
-
-        use hud_screen
-
+screen warning_dialog(message):
+    modal True
+    fixed:
+        xalign 0.5
+        yalign 0.5
+        xmaximum 500
+        yfit True
+        xfit True
+        frame:
+            padding (20, 10)
+            vbox:
+                spacing 15
+                text message:
+                    xalign 0.5
+                textbutton "OK":
+                    xalign 1.0
+                    action Hide('warning_dialog') # This should hide the screen
