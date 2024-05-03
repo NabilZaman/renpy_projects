@@ -21,4 +21,10 @@ init -900 python:
 
         return im.FactorScale(img,minscale,minscale)
 
+    def show_stat_gain(value: int, name: str):
+        sign = '+' if value > 0 else '-'
+        msg = f'{sign}{value} {name}'
+        show_fading_msg(msg)
 
+    def show_fading_msg(msg: str):
+        pass # TODO: Learn how to do this

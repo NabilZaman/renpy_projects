@@ -13,27 +13,29 @@ screen stats_menu():
         hbox:
             yoffset 200
             vbox:
-                xsize 300
-                label "Stats"
+                xsize 500
+                label "Magical Skills"
+                for skill in state.stats.magic_skills():
+                    text f"{{b}}{skill.name}{{/b}}: {skill.level} ({skill.exp}xp)"
 
-                text "punchin': 5"
-
-                text "runnin': 10"
-
-                text "shootin': 25"
-
-                text "karma: [state.karma]"
-
-                text "money: [state.money]"
 
             vbox:
-                xsize 300
+                xsize 500
+                label "Mundane Skills"
+                for skill in state.stats.mundane_skills():
+                    text f"{{b}}{skill.name}{{/b}}: {skill.level} ({skill.exp}xp)"
+
+
+            vbox:
+                xsize 500
                 label "Affection"
 
                 text "Jim: 1"
 
                 text "Johanna: 2"
 
+# We can also put things like money and symbols of major points of progression here.
+# This should be a overall summary of your character's progress.
 
 
 
