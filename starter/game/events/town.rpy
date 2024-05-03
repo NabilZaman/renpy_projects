@@ -7,6 +7,7 @@
 
 ### Event Container Definitions
 
+define shrine_events = []
 define market_events = []
 define explore_town_events = []
 define dojo_events = []
@@ -29,7 +30,7 @@ label generic_market_event(callback):
     $ callback()
 
 init python:
-    create_contained_event(market_events, "generic_market_event", reuse=True)
+    create_contained_event(market_events, "generic_market_event", reuse=True, priority=-10)
 ##
 
 label special_market_event(callback):
@@ -56,42 +57,58 @@ init python:
 label discover_dojo(callback):
     "Here I have discovered the dojo"
 
-    $ callback()
+    python:
+        dojo.enable()
+        callback()
 
 label discover_blacksmith(callback):
     "Here I have discovered the blacksmith"
 
-    $ callback()
+    python:
+        blacksmith.enable()
+        callback()
 
 label discover_orphanage(callback):
     "Here I have discovered the orphanage"
 
-    $ callback()
+    python:
+        # not a real location yet
+        callback()
 
 label discover_fountain(callback):
     "Here I have discovered the fountain"
 
-    $ callback()
+    python:
+        fountain.enable()
+        callback()
 
 label discover_back_alley(callback):
     "Here I have discovered the back alley"
 
-    $ callback()
+    python:
+        back_alley.enable()
+        callback()
 
 label discover_printer(callback):
     "Here I have discovered the printer"
 
-    $ callback()
+    python:
+        # not a real locations yet
+        callback()
 
 label discover_inn(callback):
     "Here I have discovered the inn"
 
-    $ callback()
+    python:
+        inn.enable()
+        callback()
 
 label discover_carpenter(callback):
     "Here I have discovered the carpenter"
 
-    $ callback()
+    python:
+        # not a real locations yet
+        callback()
 
 init python:
     create_contained_event(explore_town_events, 'discover_dojo')
@@ -116,7 +133,7 @@ label generic_dojo_event(callback):
     $ callback()
 
 init python:
-    create_contained_event(dojo_events, 'generic_dojo_event', takes_time=False, reuse=True)
+    create_contained_event(dojo_events, 'generic_dojo_event', takes_time=False, reuse=True, priority=-10)
 #####
 
 ##### Blacksmith Events #####
@@ -126,7 +143,7 @@ label generic_blacksmith_event(callback):
 
     $ callback()
 init python:
-    create_contained_event(blacksmith_events, 'generic_blacksmith_event', takes_time=False, reuse=True)
+    create_contained_event(blacksmith_events, 'generic_blacksmith_event', takes_time=False, reuse=True, priority=-10)
 #####
 
 ##### Fountain Events #####
@@ -136,7 +153,7 @@ label generic_fountain_event(callback):
     $ callback()
 
 init python:
-    create_contained_event(fountain_events, 'generic_fountain_event', takes_time=False, reuse=True)
+    create_contained_event(fountain_events, 'generic_fountain_event', takes_time=False, reuse=True, priority=-10)
 #####
 
 ##### Back Alley Events #####
@@ -146,7 +163,7 @@ label generic_back_alley_event(callback):
     $ callback()
 
 init python:
-    create_contained_event(back_alley_events, 'generic_back_alley_event', takes_time=False, reuse=True)
+    create_contained_event(back_alley_events, 'generic_back_alley_event', takes_time=False, reuse=True, priority=-10)
 #####
 
 ##### Inn Events #####
@@ -156,7 +173,7 @@ label generic_inn_event(callback):
     $ callback()
 
 init python:
-    create_contained_event(inn_events, 'generic_inn_event', takes_time=False, reuse=True)
+    create_contained_event(inn_events, 'generic_inn_event', takes_time=False, reuse=True, priority=-10)
 #####
 
 ##### Guild Events #####
@@ -166,5 +183,17 @@ label generic_guild_event(callback):
     $ callback()
 
 init python:
-    create_contained_event(guild_events, 'generic_guild_event', takes_time=False, reuse=True)
+    create_contained_event(guild_events, 'generic_guild_event', takes_time=False, reuse=True, priority=-10)
+#####
+
+##### Shrine Events #####
+label generic_shrine_event(callback):
+    "I visit the shrine. There's a lot of work to do but it feels good to help out."
+
+    python:
+        state.stats.spiritual_affinity.gain(5)
+        callback()
+
+init python:
+    create_contained_event(shrine_events, 'generic_shrine_event', takes_time=False, reuse=True, priority=-10)
 #####

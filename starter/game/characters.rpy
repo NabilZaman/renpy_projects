@@ -7,9 +7,6 @@ init -100 python:
         MAJOR = 1
         MINOR = 2
 
-    major_characters = []
-    minor_characters = []
-
     class CustomCharacter:
         def __init__(self, name: str, significance: Significance, color: str = "#c44",
                         dark_outline=True, image=None, met=False, introduced=False):
@@ -69,6 +66,9 @@ init -100 python:
         return [c for c in full_list if c.met]
 
 
+default major_characters = []
+default minor_characters = []
+
 define char_folder = 'character_concepts/'
 
 ### Main Character ###
@@ -92,9 +92,10 @@ default ag = CustomCharacter("ArtistGirl", Significance.MAJOR, ag_color, image=c
 
 ### Minor Characters ###
 
-define minor_character_color = "#fff"
-define hm = CustomCharacter("Headmaster", Significance.MINOR, minor_character_color, image=char_folder+"dean_transparent.png", introduced=True)
-define gr = CustomCharacter("Receptionist", Significance.MINOR, minor_character_color, image=char_folder+"guild_receptionist_transparent.png", met=True, introduced=True)
-define gm = CustomCharacter("Guildmaster", Significance.MINOR, minor_character_color, image=char_folder+"guildmaster_transparent.png", introduced=True)
-define sk = CustomCharacter("ShrineKeeper", Significance.MINOR, minor_character_color, image=char_folder+"shrine_keeper_transparent.png", introduced=True)
-define sn = CustomCharacter("SchoolNurse", Significance.MINOR, minor_character_color, image=char_folder+"hot_nurse_transparent.png")
+default minor_character_color = "#fff"
+default hm = CustomCharacter("Headmaster", Significance.MINOR, minor_character_color, image=char_folder+"dean_transparent.png", introduced=True)
+default gr = CustomCharacter("Receptionist", Significance.MINOR, minor_character_color, image=char_folder+"guild_receptionist_transparent.png", met=True, introduced=True)
+default gm = CustomCharacter("Guildmaster", Significance.MINOR, minor_character_color, image=char_folder+"guildmaster_transparent.png", introduced=True)
+default sk = CustomCharacter("ShrineKeeper", Significance.MINOR, minor_character_color, image=char_folder+"shrine_keeper_transparent.png", introduced=True)
+default sn = CustomCharacter("SchoolNurse", Significance.MINOR, minor_character_color, image=char_folder+"hot_nurse_transparent.png", introduced=True)
+default ti = CustomCharacter("TheoryInstructor", Significance.MINOR, minor_character_color, image=char_folder+"theory_professor_transparent.png", introduced=True)

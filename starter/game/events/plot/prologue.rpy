@@ -849,7 +849,7 @@ label prologue2(callback):
     $ callback()
 
 init python:
-    plot_schedule.schedule_event((2, TOD.MORNING), Event("prologue2"))
+    plot_schedule.schedule_event((2, TOD.MORNING), Event("prologue2", takes_time=False))
 
 #####
 

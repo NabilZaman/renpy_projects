@@ -1,9 +1,57 @@
 
 init -100 python:
     from typing import Callable, Iterable
+    from enum import Enum
+    from dataclasses import dataclass, asdict as data_as_dict
 
     Rectangle = tuple[int, int, int, int]
     EventDT = tuple[int, int]
+
+    class Chapter(Enum):
+        PROLOGUE = 0
+        ONE = 1
+        TWO = 2
+        THREE = 3
+        FOUR = 4
+        FIVE = 5
+
+    @dataclass
+    class StateCondition():
+        # required state parameters
+        allowed_chapters: list = None
+        disallowed_chapters: list = None
+        allowed_times: list = None
+        disallowed_times: list = None
+        allowed_days: list = None
+        disallowed_days: list = None
+        required_flags: list = None
+        banned_flags: list = None
+        custom: Callable = None
+
+        def __call__(self, state):
+            """ Determine if this condition is met based on the configured requirements. """
+            success = True
+            if allowed_chapters is not None:
+                success = success and (state.chapter in allowed_chapters)
+            if disallowed_chapters is not None:
+                success = success and (state.chapter not in disallowed_chapters)
+            if allowed_times is not None:
+                success = success and (state.cal.time_of_day in allowed_times)
+            if disallowed_times is not None:
+                success = success and (state.cal.time_of_day not in disallowed_times)
+            if allowed_days is not None:
+                success = success and (state.cal.day in allowed_days)
+            if disallowed_days is not None:
+                success = success and (state.cal.day not in disallowed_days)
+            if required_flags is not None:
+                success = success and (all(state.flags.get(f) for f in required_flags))
+            if banned_flags is not None:
+                success = success and not (any(state.flags.get(f) for f in banned_flags))
+            if custom is not None:
+                success = success and custom(state)
+
+            return success
+
 
     class Event:
         def __init__(self, label: str, takes_time=True, reuse=False, priority=0,
@@ -29,7 +77,7 @@ init -100 python:
             # All custom logic and side-effects take place in label
 
 
-    class EventContext:
+    class EventContext():
         def __init__(self, event: Event):
             self.event = event
 
@@ -67,7 +115,6 @@ init -100 python:
             # loop "backwards" as that is our priority order
             for i in range(len(self.events)-1, -1, -1):
                 if self.events[i].allowed(state):
-                    # renpy.notify(f"{self.events[i].label} is allowed")
                     return i # return the first index we find
             return None
 
@@ -180,6 +227,89 @@ init -100 python:
             self.last_dt = when
             return next_event
 
+    class Skill:
+
+        def __init__(self, name, learned=False):
+            self.name = name
+            self.learned = learned
+            self.exp = 0
+
+        def learn(self):
+            self.learned = True
+
+        @property
+        def level(self):
+            # TODO: Come up with a better level-curve
+            return self.exp // 10
+
+        def gain(self, value):
+            self.exp += value
+
+    class MagicSkill(Skill):
+        pass
+
+    class MundaneSkill(Skill):
+        pass
+
+    @dataclass
+    class Status:
+        max_hp: int = 100
+        max_mp: int = 100
+        hp: int = 100
+        mp: int = 100
+
+        def change_max_health(self, delta: int):
+            self.max_hp += delta
+            self.change_health(delta)
+
+        def change_max_mana(self, delta: int):
+            self.max_mp += delta
+            self.change_mana(delta)
+
+        def change_health(self, delta: int):
+            self.hp = min(self.hp + delta, self.max_hp)
+
+        def change_mana(self, delta: int):
+            self.mp = min(self.mp + delta, self.max_mp)
+
+
+    @dataclass
+    class Stats:
+        # Magical Skills
+        magic_theory: MagicSkill = MagicSkill('Magic Theory')
+        spiritual_affinity: MagicSkill = MagicSkill('Spiritual Affinity')
+        water: MagicSkill = MagicSkill('Water')
+        wind: MagicSkill = MagicSkill('Wind')
+        fire: MagicSkill = MagicSkill('Fire')
+        life: MagicSkill = MagicSkill('Life')
+        light: MagicSkill = MagicSkill('Light')
+        kinesis: MagicSkill = MagicSkill('Kinesis')
+        time: MagicSkill = MagicSkill('Time')
+
+        # Mundane Skills
+        strength: MundaneSkill = MundaneSkill('Strength')
+        agility: MundaneSkill = MundaneSkill('Agility')
+        charisma: MundaneSkill = MundaneSkill('Charisma')
+        creativity: MundaneSkill = MundaneSkill('Creativity')
+
+        def magic_skills(self) -> list[MagicSkill]:
+            result = []
+            for skill in data_as_dict(self).values():
+                if isinstance(skill, MagicSkill):
+                    result.append(skill)
+            return result
+
+        def mundane_skills(self) -> list[MundaneSkill]:
+            result = []
+            for skill in data_as_dict(self).values():
+                if isinstance(skill, MundaneSkill):
+                    result.append(skill)
+            return result
+
+        def get_skill_by_name(self, name: str) -> Skill:
+            return data_as_dict(self).get(name)
+
+
     class Flags:
         """ Used to manage /boolean/ flags in the game. """
         def __init__(self):
@@ -197,12 +327,14 @@ init -100 python:
             self.cal = Calendar()
             self.cur_map: Map = None
             self.event_schedule = EventSchedule()
-            self.stats = {}
+            self.stats = Stats()
+            self.status = Status()
             self.money = 100
             self.freeze_capacity = 0
             self.freezes_consumed = 0
             self.karma = 0
             self.flags = Flags()
+            self.chapter = Chapter.PROLOGUE
 
         def advance_state(self) -> None:
             next_event = self.event_schedule.fetch_next_event(self.cal.current)

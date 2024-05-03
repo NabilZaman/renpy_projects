@@ -31,24 +31,28 @@ screen calendar_display(interactable=True):
             xalign 0.5
 
 screen powers_display():
-    hbox:
-        xalign 0.0
-        yalign 0.0
-        offset (10, 10)
-        spacing 6
-        text "Time Freezes Left:":
-            size 24
+    vbox:
+        offset(10, 10)
+        text f"HP: {state.status.hp}":
             outlines [(1, "#000", 0, 0)]
-        for i in range(state.freezes_available):
-            frame:
-                background "color_black"
-                xysize(21, 21)
-                yalign 0.5
+        text f"MP: {state.status.mp}":
+            outlines [(1, "#000", 0, 0)]
+        hbox:
+            spacing 6
+            text "Time Freezes Left:":
+                size 24
+                outlines [(1, "#000", 0, 0)]
+            for i in range(state.freezes_available):
                 frame:
-                    background "color_mauve"
-                    xysize(15, 15)
-                    xalign 0.5
+                    background "color_black"
+                    xysize(21, 21)
                     yalign 0.5
+                    frame:
+                        background "color_mauve"
+                        xysize(15, 15)
+                        xalign 0.5
+                        yalign 0.5
+
 
 
 screen money_display():
