@@ -8,10 +8,11 @@ init -100 python:
         MINOR = 2
 
     class CustomCharacter:
-        def __init__(self, name: str, significance: Significance, color: str = "#c44",
+        def __init__(self, name: str, significance: Significance, color: str = "#fff",
                         dark_outline=True, image=None, met=False, introduced=False):
             self.family_name = ' '.join(name.split()[1:])
-            self._name = name.split()[0]
+            self.first_name = name.split()[0]
+            self.full_name = name
             self.met = met
             self.introduced = introduced
             self.color = color
@@ -36,10 +37,10 @@ init -100 python:
                 minor_characters.append(self)
 
         def name(self) -> str:
-            return self._name if self.introduced else '???'
+            return self.first_name if self.introduced else '???'
 
         def full_name(self):
-            return self._name + self.family_name
+            return self.full_name
 
         def meet(self) -> None:
             # this can display some popup or achievement or something eventually
@@ -87,8 +88,11 @@ default tg = CustomCharacter("Elena Rozen", Significance.MAJOR, tg_color, image=
 define tb_color = "#fff"
 default tb = CustomCharacter("TwinBoy", Significance.MAJOR, tb_color, image=char_folder+"white_hair_boy_transparent.png")
 
-define ag_color = "#13f353"
-default ag = CustomCharacter("ArtistGirl", Significance.MAJOR, ag_color, image=char_folder+"green_hair_girl_transparent.png")#, dark_outline=False)
+define ag_color = "#f3d513"
+default ag = CustomCharacter("ArtistGirl", Significance.MAJOR, ag_color, image=char_folder+"green_hair_girl_transparent.png")
+
+define ts_color = "#fff"
+default ts = CustomCharacter("TimeSpirit", Significance.MAJOR, ts_color, image=char_folder+"time_spirit_transparent.png")
 
 ### Minor Characters ###
 

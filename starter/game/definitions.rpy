@@ -5,7 +5,9 @@ init -100 python:
     from dataclasses import dataclass, asdict as data_as_dict
 
     Rectangle = tuple[int, int, int, int]
-    EventDT = tuple[int, int]
+    Day = int
+    TimeOfDay = int
+    EventDT = tuple[Day, TimeOfDay]
 
     class Chapter(Enum):
         PROLOGUE = 0
@@ -145,7 +147,6 @@ init -100 python:
 
 
     class TOD:
-        time_type = int
         MORNING = 0
         AFTERNOON = 1
         NIGHT = 2
@@ -194,15 +195,15 @@ init -100 python:
         def __init__(self, name: str, screen_name: str):
             self.name = name
             self.screen = screen_name
-            self._time_slots: dict[TOD.time_type, TimeSlotMap] = {}
+            self._time_slots: dict[TimeOfDay, TimeSlotMap] = {}
 
-        def add_time_slot(self, tod: TOD.time_type, timeSlotMap: TimeSlotMap) -> None:
+        def add_time_slot(self, tod: TimeOfDay, timeSlotMap: TimeSlotMap) -> None:
             self._time_slots[tod] = timeSlotMap
 
-        def get_map_for_time(self, tod: TOD.time_type) -> TimeSlotMap:
+        def get_map_for_time(self, tod: TimeOfDay) -> TimeSlotMap:
             return self._time_slots.get(tod)
 
-        def add_location_for_times(self, rect: Rectangle, location: Location, times: Iterable[TOD.time_type]):
+        def add_location_for_times(self, rect: Rectangle, location: Location, times: Iterable[TimeOfDay]):
             for tod in times:
                 self.get_map_for_time(tod).add_location(rect, location)
 
@@ -210,25 +211,22 @@ init -100 python:
     class EventSchedule:
         def __init__(self):
             self._events: dict[EventDT, list[Event]] = defaultdict(list)
-            self.last_dt: EventDT = None
-            self.seen_cursor = 0
 
         def schedule_event(self, when: EventDT, event: Event):
-            self._events[when].append(event)
+            self._events[when].insert(0, event)
 
         def fetch_next_event(self, when: EventDT) -> Event:
-            next_event = None
-            if self.last_dt != when:
-                self.last_dt = when
-                self.seen_cursor = 0
-            if len(self._events[when]) > self.seen_cursor:
-                next_event = self._events[when][self.seen_cursor]
-                self.seen_cursor += 1
-            self.last_dt = when
+            cur_events = self._events[when]
+            if not cur_events:
+                return
+
+            next_event = cur_events.pop() # we always get the right-most event
+            if next_event.reuse: # push it to the back of the queue
+                self.schedule_event(when, next_event)
+
             return next_event
 
     class Skill:
-
         def __init__(self, name, learned=False):
             self.name = name
             self.learned = learned
@@ -419,6 +417,10 @@ init -100 python:
 
         def change_karma(slef, delta: int) -> None:
             self.karma += delta
+
+        def change_time(day: Day, tod: TimeOfDay):
+            self.cal.day = day
+            self.cal.time_of_day = tod
 
     def create_contained_event(event_container: list, label: str, takes_time=True, reuse=False, priority=0,
                                 condition: Callable[[StateManager], bool] = None):
