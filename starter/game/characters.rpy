@@ -69,7 +69,6 @@ init -100 python:
 
 default major_characters = []
 default minor_characters = []
-default test_chars = []
 
 define char_folder = 'character_concepts/'
 
