@@ -418,7 +418,7 @@ init -100 python:
         def change_karma(slef, delta: int) -> None:
             self.karma += delta
 
-        def change_time(day: Day, tod: TimeOfDay):
+        def change_time(self, day: Day, tod: TimeOfDay):
             self.cal.day = day
             self.cal.time_of_day = tod
 

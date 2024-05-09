@@ -48,6 +48,7 @@ default state = StateManager()
 
 label setup:
     python:
+        test_chars.append(ag)
         # Setup Locations
         campus_entrance.add_event(school_transition)
         campus_exit_afternoon.add_event(town_transition)

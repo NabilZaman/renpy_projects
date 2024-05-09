@@ -192,7 +192,15 @@ label .rescue(element):
         I watch as the window flexes, and shatters, and a rush of hot air rushes out.
         """
     else:
-        "owie"
+        """
+        I approach the window. It's hot to the touch and I don't see a handle. I don't think
+        I can't get it open from the outside.
+
+        But I don't have any time, I wrap my hand in my sleeve and ram my fist into the
+        glass pane.
+
+        It shatters and several shard scratch my arm, but I can barely feel it.
+        """
         $ state.status.change_health(-20)
 
     """
@@ -265,7 +273,11 @@ label day6_afternoon(callback):
 
     Some people wanted to ask me questions, others were praising my heroism.
     But I don't feel heroic, just dead tired.
+    """
 
+    scene bg dorm room morning with dissolve
+
+    """
     I don't quite remember how I made it back to my room.
     The last vestiges of adrenaline keeping me going are long gone and I just feel empty.
 
@@ -306,12 +318,12 @@ label day6_night(callback):
 
     mc.says "Is someone there?"
 
-    ts.says "I've been here for a while now but I didn't wake you as it appeared that
+    ts.says "I've been here for some time now but I didn't wake you as it appeared that
     you needed rest."
 
     show expression ts.image
 
-    ts.meet()
+    $ ts.meet()
 
     """
     I look around to find someone... floating(?) in the middle of my room.
@@ -322,12 +334,12 @@ label day6_night(callback):
     mc.says "Who are you?"
 
     ts.says """
-    Ah, yes I suppose we've not been introduced yet from your perspective.
+    Ah, I suppose we've not been introduced yet from your perspective.
 
     I'm... what humans might call a 'Time Spirit'.
     """
 
-    ts.introduce()
+    $ ts.introduce()
 
     mc.says "A what? Wait you're a spirit??"
 
@@ -341,13 +353,13 @@ label day6_night(callback):
     'This' is possible because you've attuned to me, and I to you, in a sense.
     To put it lightly, it's not usual, what we've done.
 
-    As for my purpose now, well, that's a more delicate subject. One that I'm not ready to share
+    As for my purpose now, well, that's a more delicate subject. One that you're not ready to hear
     fully. But the most pertinant aspect of my purpose now is to offer you my assistance.
     """
 
     "Of all the impossible things that have happened to me this week, this one really takes the cake."
 
-    mc.says "Ok... thank you, I guess? I don't know what you're offering,
+    mc.says "Ok... thank you, I guess? I don't know what help you're offering,
     or what help you think I need, but I have about a million more questions if that's alright."
 
     ts.says """
@@ -359,11 +371,6 @@ label day6_night(callback):
     I'll meet you again at the same time, right outside your door.
     But until then, you've got an exam to take.
     """
-
-    # Can anyone else see you?
-    # If I am projecting myself so strongly here then at times, perhaps, in glimpses.
-    # No other human will have attuned to me so they won't see me as you do, but it's still best
-    # if I stay concealed when we aren't alone.
 
     python:
         state.change_time(6, TOD.MORNING) # here we go again
@@ -396,12 +403,12 @@ label day6_morning_take2(callback):
     I look around the room, still sitting in my bed and it takes me a moment to realize that
     it's not evening anymore.
 
-    Outside the window the sun has just risen. Did I somehnow pass out all night without
+    Outside the window the sun has just risen. Did I somehow pass out all night without
     realizing?
 
-    I suppose so. I guess then it's time to face the reality of the situation. Though I
+    I suppose so. Then it's time to face the reality of the situation. Though I
     may have helped save the Shrinekeeper I missed the qualification exam and so my admission
-    will be rescinded.
+    at the academy will be rescinded.
 
     I start to gather my things to pack and then think better of it. I'll need time to make
     arrangements to travel home. I wonder if I can petition the school to let me use this
@@ -417,9 +424,11 @@ label day6_morning_take2(callback):
 
     "Administrator" "Good morning, prospect. I do hope you're ready?"
 
-    "Ready? To leave? I suppose it's obvious they will have noted my absense and have just assumed
-    I chickened out. So they've already begun the expulsion process, but I hope they'll still be
-    receptive to my request."
+    """Ready? To leave? I suppose it's obvious they will have noted my absense and have just assumed
+    I chickened out. So they've already begun the expulsion process.
+
+    I hope they'll still be receptive to my request.
+    """
 
     mc.says "Good morning, administrator. I'm afraid that's what I've come to talk to you about.
     I don't believe I'm quite ready yet."
@@ -458,15 +467,6 @@ label day6_morning_take2(callback):
     me before, I thought they were speaking metaphorically.
 
     But no, this is what they meant by helping me. They somehow sent me back in time.
-
-    I realize, it was their voice that gave me the push I needed to rush into town this morning,
-    or the push I will need?
-
-    I didn't notice it since the air has smelled of smoke all day but the fire,
-    it's still going on at the temple isn't it?
-
-    Which means that right now... judging by how high the Sun is, I should already be well on my way
-    into town. Is that how this works?
     """
 
     scene bg lecture hall morning with dissolve
@@ -474,10 +474,9 @@ label day6_morning_take2(callback):
     """
     I make my way to the exam hall. Though I'm still a little early, students are already trickling in.
 
-    The time spirit told me that I needed to take the exam, so I have to trust them that even
-    though I'm not heading into town again this time, it will still work out.
+    After everything I've been through, it seems silly to be nervous about this now.
 
-    They've given me another chance. All that's left is to focus and not let it go to waste.
+    The time spiri gave me another chance. All that's left is to focus and not let it go to waste.
     """
 
     call .exam_intro
@@ -541,29 +540,31 @@ label .written_exam:
 
     hide expression ti.image
 
-    """
-    I open the exam booklet and turn to the first page.
+    "I take the writen exam. A UI window should appear now to summarize my progress."
 
-    "Name the six spiritual elements and give an example of a valid spell that one
-    could channel by attuning that element."
+    # """
+    # I open the exam booklet and turn to the first page.
 
-    I know this. In fact, as I flip through the pages, I know each of these.
-    """
+    # "Name the six spiritual elements and give an example of a valid spell that one
+    # could channel by attuning that element."
 
-    # TODO: do skill checks to see if you get bonus points.
+    # I know this. In fact, as I flip through the pages, I know each of these.
+    # """
 
-    """
-    It isn't until I get to the final two questions that I'm stumped.
+    # # TODO: do skill checks to see if you get bonus points.
 
-    Something about Snell's Law of light refraction and it's application in casting light across
-    disprate media... the question goes well over my head.
+    # """
+    # It isn't until I get to the final two questions that I'm stumped.
 
-    But despite that, I feel good about this. I feel like I answered enough questions on the
-    written portion to clear the bar for passing the exam.
+    # Something about Snell's Law of light refraction and it's application in casting light across
+    # disprate media... the question goes well over my head.
 
-    I make a feeble guess at the last two questions, because hey why not, and turn in my completed
-    booklet.
-    """
+    # But despite that, I feel good about this. I feel like I answered enough questions on the
+    # written portion to clear the bar for passing the exam.
+
+    # I make a feeble guess at the last two questions, because hey why not, and turn in my completed
+    # booklet.
+    # """
 
     show expression ti.image
 
@@ -572,25 +573,312 @@ label .written_exam:
     "The fundamentals instructor reenters the room with a entourage of a dozen other
     professors in tow."
 
-    ti.says "We will now assign you each to a groups proctored by my colleagues here.
-    Please follow report to your proctor and follow them outside as your name is called."
+    ti.says "We will now assign you to groups proctored by my colleagues here.
+    Please report to your proctor and follow them outside as your name is called."
 
-    """
-    The proctors go through the roster of examinees one by one and file out of the hall.
+    # """
+    # The proctors go through the roster of examinees one by one and file out of the hall.
 
-    A handful of names receive no response, I guess there were some genuine no shows after all.
+    # A handful of names receive no response, I guess there were some genuine no shows after all.
 
-    I can't help but wonder if that's what happened earlier when I was in town and not here.
-    Except, wait, I'm currently also in town, so I was always here taking the exam all along?
-    It hurts my head to think about - I'll have to ask the Time Spirit when I next get the chance.
+    # I can't help but wonder if that's what happened earlier when I was in town and not here.
+    # Except, wait, I'm currently also in town, so I was always here taking the exam all along?
+    # It hurts my head to think about - I'll have to ask the Time Spirit when I next get the chance.
 
-    Finally my name is called and I go to join my proctor on the field where we'll take our
-    practical exam.
-    """
+    # Finally my name is called and I go to join my proctor on the field where we'll take our
+    # practical exam.
+    # """
 
     call .practical_exam
 
     return
+
+label .practical_exam:
+
+    "I take the practical exam. A UI window should appear now to present the spellcasting
+    challanges."
+
+    call .after_exam
+
+    return
+
+label .after_exam:
+
+    scene bg lecture hall morning with dissolve
+
+    ti.says """
+    And that concludes the qualification exam.
+
+    You should each already have your results and know whether you've passed or failed the exam.
+    The rankings will be posted tomorrow on my door.
+
+    It's been a plessure teaching you all, now go out there and enjoy a well deserved rest of your
+    day off.
+    """
+
+    # Show interface of ranking you against your peers.
+
+
+    # "After the exam, I'm tired and I come back to my room."
+
+    # "Oh hey, it's time spirit. Hi time spirit!"
+
+    # ts.says "Hey."
+
+    # "The end."
+
+    return
+
+
+label day6_afternoon_take2(callback):
+
+    scene bg dorm hallway morning with dissolve
+
+    """
+    I make it back to the dorm and I feel like I'm walking on air.
+
+    I did it.
+
+    I'm a full student at the academy now.
+
+    Not only that but... well, I guess I've met a time spirit and saved the shrinekeeper from the
+    burning temple, so all in all it's been a pretty successful day.
+
+    Wait.
+    """
+
+    ms.says "The Shrinekeeper!"
+
+    """
+    As the realization dawns on me, my mood darkens.
+
+    The fire at the temple. If I went to take the exam then no one went to the temple to save her.
+
+    I'm almost back to my room now and think to turn back but what could I possibly do now?
+
+    I have to at least go check.
+    """
+
+    show expression ts.image
+
+    ts.says "You needn't worry about the shrine keepr. They were saved them this morning while you
+    took the exam."
+
+    """
+    I see the time spirit floating in front of my room as I approach and her words lift the mood
+    again.
+    """
+
+    mc.says "Really? I'm glad. I'm honestly still pretty turned around by all this."
+
+    """
+    I reach for the handle to my door when the spirit stops me.
+    """
+
+    ts.says "You shouldn't go in there. Not yet, at least. There's a hero taking a well deserved
+    rest inside."
+
+    mc.says "What do you mean? Who would be in my room... no."
+
+    "This can't be possible."
+
+    mc.says "Am I inside there right now?"
+
+    ts.says """
+    You were inside, yes, as of 1 hour 43 minutes 8 seconds ago.
+    You then left to return to this morning in another 57 minutes and 11 seconds.
+
+    It would be a both rude and catastrophic if you were to disturb your own slumber.
+    So let's take our conversation outside; I understand you have more questions for me.
+    """
+
+    """
+    I can't make sense of this right now but I obediently follow the spirit as she floats to
+    the front of the dorm.
+    """
+
+    call .talk_with_timespirit
+
+    $ callback()
+
+label .talk_with_timespirit:
+
+    scene bg school courtyard morning with dissolve
+
+    """
+    As we step (float?) outside I lose track of the spirit. My frayed mind isn't tolerant of
+    another surprise today and I start to look around in a panic.
+
+    I'm more than ready to accept the explanation that many of the impossible happenings were
+    the delusions of an overly taxed mind, when I hear her voice.
+    """
+
+    ts.says "Don't worry I'm still with you, just... less than before. In the interest of
+    diescretion."
+
+    mc.says "Discetion? What do you mean?"
+
+    ts.says "It wouldn't be wise for me to be seen by others."
+
+    mc.says "So anyone could see you? I worried you were in my head."
+
+    ts.says """
+    I'm certainly not in your head. And yes, if I am projecting myself so strongly,
+    then at times, perhaps others could see me. In glimpses.
+
+    No other human will have attuned to me so they won't see me as you do, but it's still best
+    if I stay concealed when we aren't alone.
+    """
+
+    """
+    I look around and there are many other students mingling in the courtyard, celebrating the
+    end of the first hard week of school.
+
+    We walk around for a bit longer in silence, I don't want to be heard talking to myeslf,
+    and I need some time to collect my thoughts.
+
+    So I have a spirit following me around, a time spirit at that. I didn't know that time
+    spirits existed. I guess I didn't really know any spirits even existed.
+
+    And she turned back time. Or sent me back in time. Why? How? My million questions start
+    to rush back to me and I don't know where to begin.
+
+    I guess I should start with the question that is eating at me the most right now.
+    """
+
+    mc.says "Why me?"
+
+    "She doesn't respond for several seconds, and I wonder if she left. I'd have no way of knowing."
+
+    ts.says "I saw you at the srine. You paid respects that humans don't often do anymore."
+
+    mc.says "So... because I was devout? I'm sorry but I didn't really believe in spirits until
+    I met you. Not fully."
+
+    ts.says """No, human devotion to causes and religion is for self satisfaction. It's of no interst
+    to the spirits.
+
+    No I saw you and you were... receptive to me, even if you didn't mean to be.
+    I could reach out to you and I needed your help.
+    """
+
+    "They needed my help?"
+
+    mc.says "With the temple today, you wanted me to save it?"
+
+    ts.says "No, you could not save the temple. But you could save its resident."
+
+    "I try to process this. The time spirit met me when I visited the temple
+    for the first time the day after I arrived."
+
+    mc.says "That's when I started having those dreams."
+
+    ts.says "Human cognition is... malleable when dreaming. I granted you prescience so that you
+    might see what I did. Of what would happen today."
+
+    mc.says "Why? Why did you need me to save the shrine keeper?"
+
+    ts.says "I've observed the keeper of that shrine for many years. I've developed... a fondness
+    for her. And as I've already said, you were receptive to me. If I could have warned her directly
+    I would have."
+
+    """
+    I guess that makes sense. She needed someone to prevent the worst of the disaster today and
+    I was all she could find.
+    """
+
+    mc.says "So then... you came to find me after the fire to repay me? That's why you sent me
+    back in time?"
+
+    ts.says "In a manner of speaking... But, it will be important that you are enrolled at the
+    academy in the days to come.
+    I shifted your path to allow you to accomplish everything you needed."
+
+    "I wait for her to elaborate but when she doesn't I feel the weight of the silence. There
+    are things the spirit isn't willing to tell me about what she wants from me."
+
+    mc.says "Then, after you sent me back, there were two me weren't there? There still are?"
+
+    ts.says """A spirit's perception of time is very different from a human's, a time spirit's
+    especially.
+
+    From my perspective there is but one of you, but your path through time is... more complicated
+    than many others. Much of that is due to my influence.
+
+    So you may find that if you visit your room in the next 3 minutes and 39 seonds, you
+    will perceive yourself from a different angle than usual. It's not something humans are
+    well equipped to handle so I'd discourage you trying.
+    """
+
+    "In my random walk around campus I've found myself back in front of the dormitory."
+
+    mc.says "Was I always here? If I woke up early and stepped outside, would I find myself
+    standing here? Or am I only here now and... not before?"
+
+    """My head hurts trying to organize the logic of the situation and I feel foolish trying
+    to express concepts beyond my understanding in words.
+
+    It doesn't help that in response I hear the spirit laugh at me."""
+
+    ts.says """Hahahaha, oh I've missed conversing with humans. Hypotheticals are concept
+    I struggled to grasp for ages. They still amuse me.
+
+    For all intents and purposes, yes, you were always standing outside these doors
+    while inside you slept.
+    """
+
+    ts.says "You're about to wake up now so I have to leave to greet you. Wait no less than 10
+    minutes before returning to your room."
+
+    "And with that I'm alone again."
+
+    return
+
+label day6_night_take2(callback):
+
+    scene bg black with dissolve
+
+    "I decide to continue my stroll around campus to clear my thoughts before returning to my
+    dorm room."
+
+    "When I make it back I hesitantly open the door, not sure what I'd do if I encountered myself."
+
+    scene bg dorm room night with dissolve
+
+    show expression ts.image
+
+    ts.says "Welcome back. I only just shifted you 4 minutes ago."
+
+    "She looks a little too comfortable in here, absently inspecting the posessions on my desk."
+
+    mc.says "Thanks. So... what now?"
+
+    ts.says "Excellent question. Now you ought to rest, there will be time for more questions
+    later."
+
+    mc.says "That's the thing, though. How much later? What are you still doing here if I've
+    managed to rescue the shrine keeper and taken the exam?"
+
+    ts.says """As I've just finished telling you, my purpose here is a delicate matter, but you're
+    right, now that you've finished your qualifying exam, that purpose has shifted.
+
+    Suffice to say I'll be needing your assistance again, and you'll be needing mine.
+    So from now, I'll be joining you."""
+
+    "I don't have the energy to press the absurdity of the circumstances anymore today,
+    so just like that, I have my own guardian spirit."
+
+    mc.says "In that case we should at least make introductions. I'm [mc.first_name].
+    What should I call you?"
+
+    "In response, the spirit appears pensive for a moment."
+
+    ts.says "You will call me [ts.name()]."
+
+    # Now play credits
+
+    $ callback()
+
 
 default entrance_exam_chosen_element = None
 default entrance_exam_element_set = set()
@@ -617,7 +905,7 @@ label .exam_element_choice:
 
     return
 
-label .practical_exam:
+label .unused_practical_exam_scene:
 
     "There are 6 of us lined up on the grass. We're not that far from the next group over
     being proctored by another professor."
@@ -762,20 +1050,10 @@ label .practical_exam:
 
     return
 
-label .after_exam:
-    "After the exam, I'm tired and I come back to my room."
-
-    "Oh hey, it's time spirit. Hi time spirit!"
-
-    ts.says "Hey."
-
-    "The end."
-
-    return
-
 
 init python:
     plot_schedule.schedule_event((6, TOD.MORNING), Event("day6"))
     plot_schedule.schedule_event((6, TOD.AFTERNOON), Event("day6_afternoon"))
     plot_schedule.schedule_event((6, TOD.NIGHT), Event("day6_night", takes_time=False))
     plot_schedule.schedule_event((6, TOD.MORNING), Event("day6_morning_take2"))
+    plot_schedule.schedule_event((6, TOD.AFTERNOON), Event("day6_afternoon_take2"))
