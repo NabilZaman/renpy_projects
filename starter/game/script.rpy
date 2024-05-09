@@ -3,22 +3,12 @@
 
 label start:
 
+    # The setup label contains all the logic to set up the various game systems.
     call setup
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    # show eileen happy
-
-    # show screen calendar_display()
-
+    # This sets off the state machine that will drive the main game. We should not return from this operation until the game has ended.
     $ state.advance_state()
 
-    "That concludes the interactive portion of the game."
-
     "The end."
-
-    # This ends the game.
 
     return
