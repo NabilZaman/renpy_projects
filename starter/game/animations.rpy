@@ -36,3 +36,13 @@ transform time_of_day_spin(duration=2.0, start_angle=0, end_angle=360, loop=Fals
     rotate start_angle
     pause 0.5
     linear duration rotate end_angle
+
+transform rise_and_fade(duration=1.0, ystart=0.3, yend=0.2):
+    xalign 0.5
+    ycenter ystart
+    parallel:
+        linear duration ycenter yend
+    parallel:
+        linear duration alpha 0.0
+
+

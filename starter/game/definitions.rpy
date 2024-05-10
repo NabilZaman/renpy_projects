@@ -247,6 +247,7 @@ init -100 python:
             return self.exp // 10
 
         def gain(self, value):
+            show_stat_gain(value, f'{self.name} xp')
             self.exp += value
 
     class MagicSkill(Skill):
@@ -263,17 +264,21 @@ init -100 python:
         mp: int = 100
 
         def change_max_health(self, delta: int):
+            show_stat_gain(delta, f'max health')
             self.max_hp += delta
             self.change_health(delta)
 
         def change_max_mana(self, delta: int):
+            show_stat_gain(delta, f'max mana')
             self.max_mp += delta
             self.change_mana(delta)
 
         def change_health(self, delta: int):
+            show_stat_gain(delta, f'health')
             self.hp = min(self.hp + delta, self.max_hp)
 
         def change_mana(self, delta: int):
+            show_stat_gain(delta, f'mana')
             self.mp = min(self.mp + delta, self.max_mp)
 
 
@@ -385,11 +390,6 @@ init -100 python:
 
             return interact
 
-        # def post_event(self, context):
-        #     if context.event.takes_time:
-        #         self.cal.advance()
-        #     self.advance_state()
-
         def freeze(self) -> None:
             renpy.restart_interaction()
             if self.is_frozen():
@@ -420,6 +420,7 @@ init -100 python:
             return self.freeze
 
         def change_money(self, delta: int) -> None:
+            show_stat_gain(delta, 'money')
             self.money += delta
 
         def change_karma(slef, delta: int) -> None:
