@@ -49,7 +49,7 @@ screen characters_menu():
             if characters:
                 use char_bio_screen(characters[character_menu_index])
             else: # Otherwise tell the player off for being a loser
-                text "You haven't met anyone important yet, get out there and start making friends!":
+                text "You haven't met anyone important yet; get out there and start making friends!":
                     xalign 0.5
                     yalign 0.5
                     outlines [(1, "#000", 0, 0)]
@@ -67,11 +67,8 @@ screen char_bio_screen(char):
             frame:
                 background "color_white"
                 xysize (character_menu_portrait_width, character_menu_portrait_height)
-                frame:
-                    xalign 0.5
-                    yalign 0.5
-                    background proportional_scale(char.image, character_menu_portrait_width, character_menu_portrait_height)
-            #Then the character stats
+                add char.image:
+                    fit "contain"
             frame:
                 has vbox
                 spacing 10

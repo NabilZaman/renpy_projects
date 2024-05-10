@@ -320,11 +320,11 @@ label theory_lesson3(callback):
     see the motion of the pencil in space, rising gently above my desk then tumbling again.
     """
 
+    $ state.stats.magic_theory.gain(10)
+
     "We keep the drills up throughout class, the professor offering more helpful hints."
 
-    python:
-        state.stats.magic_theory.gain(10)
-        callback()
+    $ callback()
 
 label theory_lesson4(callback):
 
@@ -337,6 +337,8 @@ label theory_lesson4(callback):
 
     "This is probably the subject I'm most familiar with so far."
 
+    $ state.stats.magic_theory.gain(10)
+
     ti.says """Man I'm so uncofident about this mana thing.
 
     Mana is another concept with some traditional understanding that we've discovered to be
@@ -344,8 +346,6 @@ label theory_lesson4(callback):
 
     It is a energy of living things. You can use it to magic. You can also use it to not magic.
     """
-
-    $ state.stats.magic_theory.gain(10)
 
     $ callback()
 

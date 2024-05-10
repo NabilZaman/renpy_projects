@@ -25,3 +25,8 @@ image bg shrine evening = Frame(bg_folder + "shrine_evening.jpg")
 image bg sink = bg_folder + "sink.jpg"
 image bg town street afternoon = Frame(bg_folder + 'town_street_afternoon.jpg')
 
+
+# icons
+define icon_folder = 'icons/'
+image time_of_day_cycle = icon_folder + 'time_of_day_cycle.png'
+
