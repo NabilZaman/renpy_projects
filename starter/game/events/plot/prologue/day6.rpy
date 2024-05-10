@@ -1046,8 +1046,6 @@ label .unused_practical_exam_scene:
 
     "I do the magic."
 
-    call .after_exam
-
     return
 
 

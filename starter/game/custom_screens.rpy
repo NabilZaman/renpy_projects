@@ -126,3 +126,38 @@ screen warning_dialog(message):
                 textbutton "OK":
                     xalign 1.0
                     action Hide('warning_dialog') # This should hide the screen
+
+define time_of_day_angles = {
+    TOD.MORNING: 0,
+    TOD.AFTERNOON: 240,
+    TOD.NIGHT: 120,
+}
+
+define time_of_day_audio = {
+    TOD.MORNING: "effects/morning_sound.wav",
+    TOD.AFTERNOON: "effects/afternoon_sound.wav",
+    TOD.NIGHT: "effects/evening_sound.wav",
+}
+
+screen time_of_day_transition(initial_time):
+    python:
+        target_time = (initial_time + 1) % TOD.TIME_SLOTS
+        initial_angle = time_of_day_angles[initial_time]
+        final_angle = initial_angle - 120
+        sound_effect = time_of_day_audio[target_time]
+    on "show" action Play("sound", sound_effect)
+    fixed:
+        frame:
+            xfill True
+            yfill True
+            background "color_black"
+            fixed:
+                xalign 0.5
+                yalign 0.5
+                xysize (300, 300)
+                add "time_of_day_cycle" at time_of_day_spin(2.0, start_angle=initial_angle, end_angle=final_angle):
+                    fit "contain"
+                    xalign 0.5
+                    yalign 0.5
+
+    timer 3.0 action Return(True)

@@ -75,6 +75,7 @@ init -100 python:
         def trigger(self):
             context = EventContext(self)
             store.quick_menu = True
+            renpy.transition(dissolve)
             renpy.call(self.label, context)
             # All custom logic and side-effects take place in label
 
@@ -84,8 +85,7 @@ init -100 python:
             self.event = event
 
         def __call__(self):
-            global state
-            state.post_event(self)
+            renpy.call("post_event", self)
 
 
     class Location:
@@ -168,12 +168,18 @@ init -100 python:
 
         def advance(self) -> None:
             if self.frozen:
+                # play frozen animation
                 self.frozen = False
             else:
                 next_time = TOD.next(self.time_of_day)
                 if next_time <= self.time_of_day: #We've wrapped around so it's a new day!
                     self.day += 1
+                prev_time = self.time_of_day
                 self.time_of_day = next_time
+                renpy.scene()
+                renpy.transition(dissolve)
+                renpy.show("bg black")
+                renpy.call_screen("time_of_day_transition", prev_time)
 
         @property
         def current(self) -> EventDT:
@@ -352,6 +358,7 @@ init -100 python:
                 return
             cur_time_map = self.get_cur_time_map()
             store.quick_menu = False
+            renpy.transition(dissolve)
             renpy.call_screen(self.cur_map.screen, self.get_cur_time_map())
 
         def set_map(self, map: Map):
@@ -378,10 +385,10 @@ init -100 python:
 
             return interact
 
-        def post_event(self, context):
-            if context.event.takes_time:
-                self.cal.advance()
-            self.advance_state()
+        # def post_event(self, context):
+        #     if context.event.takes_time:
+        #         self.cal.advance()
+        #     self.advance_state()
 
         def freeze(self) -> None:
             renpy.restart_interaction()
@@ -428,4 +435,12 @@ init -100 python:
         event_container.append(event)
 
 define plot_schedule = EventSchedule()
+
+label post_event(context):
+    if context.event.takes_time:
+        $ state.cal.advance()
+
+    $ state.advance_state()
+
+    return
 
