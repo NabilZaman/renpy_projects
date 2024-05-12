@@ -89,5 +89,7 @@ label setup:
         state.set_map(prologue_school_map) # The first map will be the prologue school map.
         state.event_schedule = plot_schedule
 
+        setup_spells()
+
 
     return

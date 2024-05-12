@@ -33,6 +33,8 @@ screen game_menu(title):
 
             textbutton _("Mysteries") action ShowMenu("mysteries_menu")
 
+            textbutton _("Spells") action ShowMenu("spells_menu")
+
         textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("preferences")

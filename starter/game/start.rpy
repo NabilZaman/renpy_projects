@@ -6,45 +6,25 @@ init python:
         if screen_displayable is not None:
             screen_displayable.set_transform_event(event_name)
 
-transform card_unhover:
-    fit "contain"
-    xalign 0.5
-    yalign 0.5
-    linear 0.07 zoom 1.0
-
-transform card_hover:
-    fit "contain"
-    xalign 0.5
-    yalign 0.5
-    linear 0.07 zoom 1.5
-
 transform zoom_on_hover:
     on hover:
-        linear 0.08 zoom 2.0
+        linear 0.1 zoom 2.0
     on idle:
-        linear 0.08 zoom 1.0
+        zoom 1.0
+
 
 transform fit_center(displayable):
     displayable
     align (0.5, 0.5)
     fit "contain"
 
-transform zoom_transformer(factor, displayable):
+transform zoomer(factor, displayable):
     displayable
     zoom factor
-
-transform fit_transformer(displayable):
-    displayable
-    fit "contain"
-
 
 transform outer_card_default:
     # zoom 0.33
     pass
-
-transform card_default:
-    fit "contain"
-    # zoom 0.33
 
 define card_text = (
         "Attack : 50\n"
@@ -52,9 +32,11 @@ define card_text = (
         "Foo : 10000\n"
         )
 
+image foo = zoomer(.5, "icons/green_card.png")
+
 define card_img = fit_center(Image("icons/green_card.png"))
 
-define compound_img = zoom_transformer(0.33, Fixed(
+define compound_img = zoomer(0.33, Fixed(
     Fixed(
         fit_center(Image("icons/green_card.png")),
         Fixed(Frame("icons/time_of_day_cycle.png"), pos=(21, 79), xysize=(396, 238)),
@@ -64,19 +46,6 @@ define compound_img = zoom_transformer(0.33, Fixed(
     ),
     xysize=(437, 642)
 ))
-
-image card:
-    "icons/green_card.png"
-    align (0.5, 0.5)
-    fit "contain"
-
-screen test_zoom():
-    imagebutton:
-        idle card_img #fit_center("icons/green_card.png")
-        at zoom_on_hover
-        align (0.5, 0.5)
-        xysize(150, 220)
-        action Return()
 
 screen test_card_placement():
     fixed:
