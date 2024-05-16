@@ -41,6 +41,36 @@ init -99 python:
         def add_spell(self, spell: Spell):
             self.spells.append(spell)
 
+
+    class SpellRegistry:
+        def __init__(self):
+            self.spells: list[tuple[Spell, Spellbook]] = []
+
+        def register(self, spell: Spell, spellbook: Spellbook):
+            self.spells.append((spell, spellbook))
+
+        def unregister(self, spell: Spell):
+            for entry in self.spells:
+                if entry[0] == spell:
+                    self.spells.remove(entry)
+
+        def is_registered(self, spell: Spell):
+            for entry in self.spells:
+                if entry[0] == spell:
+                    return True
+            return False
+
+        def __iter__(self):
+            for spell, book in self.spells:
+                yield spell, book
+
+        def __len__(self):
+            return len(self.spells)
+
+        def __getitem__(self, key):
+            return self.spells[key]
+
+
     def create_spell(name: str, element: Element, level_req: int, image: str,
                         effect: dict[SpellAttribute, int], cost: int, spellbook: Spellbook):
         spellbook.add_spell(Spell(name, element, level_req, image, effect, cost))
@@ -55,6 +85,8 @@ define light_card_frame = icon_folder + "rainbow_card.png"
 define life_card_frame = icon_folder + "green_card.png"
 
 default spellbooks = []
+default spell_registry = SpellRegistry()
+
 
 default water_spells = Spellbook(water_card_frame)
 default wind_spells = Spellbook(wind_card_frame)
@@ -71,7 +103,7 @@ init python:
             level_req=1,
             image="icons/time_of_day_cycle.png",
             effect={SpellAttribute.Cool: 5, SpellAttribute.Force: 2},
-            cost=2,
+            cost=1,
             spellbook=water_spells
         )
         create_spell(
@@ -89,7 +121,7 @@ init python:
             level_req=3,
             image="icons/time_of_day_cycle.png",
             effect={SpellAttribute.Cool: 5, SpellAttribute.Force: 2},
-            cost=2,
+            cost=3,
             spellbook=water_spells
         )
         create_spell(
@@ -107,7 +139,7 @@ init python:
             level_req=2,
             image="icons/time_of_day_cycle.png",
             effect={SpellAttribute.Force: 5},
-            cost=1,
+            cost=2,
             spellbook=wind_spells
         )
         create_spell(
@@ -116,7 +148,7 @@ init python:
             level_req=3,
             image="icons/time_of_day_cycle.png",
             effect={SpellAttribute.Force: 5},
-            cost=1,
+            cost=3,
             spellbook=wind_spells
         )
         spellbooks.extend([water_spells, water_spells, water_spells, water_spells, water_spells])

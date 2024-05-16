@@ -5,7 +5,7 @@ image color_white = "#fff"
 image color_mauve = "#88f"
 image color_black = "#000"
 
-# background images
+# game backgrounds
 define bg_folder = 'background_concepts/'
 image bg black = Frame("color_black")
 image bg admin night = Frame(bg_folder + "school_admin_night.jpg")
@@ -25,6 +25,11 @@ image bg shrine evening = Frame(bg_folder + "shrine_evening.jpg")
 image bg sink = bg_folder + "sink.jpg"
 image bg town street afternoon = Frame(bg_folder + 'town_street_afternoon.jpg')
 
+# menu backgrounds
+image bg_menu = "icons/menu_bg.png"
+image bg_menu_content = "icons/menu_content_bg.png"
+image bg_spell_registry = "icons/registered_spells_bg.png"
+image card_slot = "icons/card_slot.png"
 
 # icons
 define icon_folder = 'icons/'
