@@ -45,4 +45,13 @@ transform rise_and_fade(duration=1.0, ystart=0.3, yend=0.2):
     parallel:
         linear duration alpha 0.0
 
+transform zoom_on_hover:
+    on hover:
+        linear 0.1 zoom 2.0
+    on idle:
+        zoom 1.0
+
+transform compose(d, t):
+    d
+    t
 

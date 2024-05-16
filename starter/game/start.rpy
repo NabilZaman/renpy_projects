@@ -6,13 +6,6 @@ init python:
         if screen_displayable is not None:
             screen_displayable.set_transform_event(event_name)
 
-transform zoom_on_hover:
-    on hover:
-        linear 0.1 zoom 2.0
-    on idle:
-        zoom 1.0
-
-
 transform fit_center(displayable):
     displayable
     align (0.5, 0.5)
@@ -22,15 +15,22 @@ transform zoomer(factor, displayable):
     displayable
     zoom factor
 
-transform outer_card_default:
-    # zoom 0.33
-    pass
-
 define card_text = (
         "Attack : 50\n"
         "Defense : 100\n"
         "Foo : 10000\n"
         )
+
+transform test_t:
+    align (0.5, 0.5)
+    block:
+        linear 0.5 xalign 1.0
+        linear 0.5 xalign 0.0
+        repeat
+
+image test_img = "icons/green_card.png"
+
+image test_c = compose(zoomer(2.0, "test_img"), test_t)
 
 image foo = zoomer(.5, "icons/green_card.png")
 
@@ -49,7 +49,6 @@ define compound_img = zoomer(0.33, Fixed(
 
 screen test_card_placement():
     fixed:
-        at outer_card_default
         align (0.5, 0.5)
         xysize (437, 642)
         fixed:
@@ -89,6 +88,7 @@ label testing:
     "before animation"
 
     call screen test_card_obj
+    # show test_c
 
     "after animation"
 
