@@ -87,6 +87,7 @@ define life_card_frame = icon_folder + "green_card.png"
 default spellbooks = []
 default spell_registry = SpellRegistry()
 
+
 default water_spells = Spellbook(water_card_frame)
 default wind_spells = Spellbook(wind_card_frame)
 default fire_spells = Spellbook(fire_card_frame)

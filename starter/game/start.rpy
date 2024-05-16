@@ -15,6 +15,7 @@ transform zoomer(factor, displayable):
     displayable
     zoom factor
 
+
 define card_text = (
         "Attack : 50\n"
         "Defense : 100\n"
@@ -31,6 +32,7 @@ transform test_t:
 image test_img = "icons/green_card.png"
 
 image test_c = compose(zoomer(2.0, "test_img"), test_t)
+
 
 image foo = zoomer(.5, "icons/green_card.png")
 

@@ -57,8 +57,6 @@ init python:
         return [s for s in spellbook.spells if not spell_registry.is_registered(s)]
 
 
-
-
 screen spells_menu():
 
     python:
@@ -69,7 +67,6 @@ screen spells_menu():
         top_spell = None
         if top_book is not None and top_button[0] < len(unregistered_spells(top_book)):
             top_spell = unregistered_spells(top_book)[top_button[0]]
-
 
     tag menu
 
@@ -128,7 +125,4 @@ screen spells_menu():
                             add "card_slot":
                                 xysize (144, 212)
                                 alpha 0.65
-
-
-
 
