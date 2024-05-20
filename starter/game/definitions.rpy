@@ -57,10 +57,11 @@ init -100 python:
 
     class Event:
         def __init__(self, label: str, takes_time=True, reuse=False, priority=0,
-                        condition: Callable = None):
+                        condition: Callable = None, icon="question_icon"):
             self.label = label
             self.takes_time = takes_time
             self.reuse = reuse
+            self.icon = icon
             # The priority determines in what order events will occur.
             # Events with higher numeric priorities come before lower ones.
             # Ties broken arbitrarily (not random)
@@ -127,6 +128,12 @@ init -100 python:
                 if next_event.reuse:
                     self.add_event(next_event)
                 return next_event
+
+        def peek_next(self) -> Event:
+            if self.available:
+                index = self.find_next_event_index()
+                if index is not None:
+                    return self.events[index]
 
         def available(self):
             return self.enabled and bool(self.available_events())

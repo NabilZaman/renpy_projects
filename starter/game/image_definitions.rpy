@@ -22,7 +22,7 @@ image bg school auditorium = Frame(bg_folder + "school_auditorium.jpg")
 image bg school courtyard morning = Frame(bg_folder + 'school_courtyard_morning.jpg')
 image bg school infirmary morning = Frame(bg_folder + 'school_infirmary_morning.jpg')
 image bg shrine evening = Frame(bg_folder + "shrine_evening.jpg")
-image bg sink = bg_folder + "sink.jpg"
+image sink = bg_folder + "sink.jpg"
 image bg town street afternoon = Frame(bg_folder + 'town_street_afternoon.jpg')
 
 # menu backgrounds
@@ -34,4 +34,5 @@ image card_slot = "icons/card_slot.png"
 # icons
 define icon_folder = 'icons/'
 image time_of_day_cycle = icon_folder + 'time_of_day_cycle.png'
+image question_icon = icon_folder + 'question_icon.png'
 

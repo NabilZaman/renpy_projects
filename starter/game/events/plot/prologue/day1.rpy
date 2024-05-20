@@ -13,17 +13,24 @@ label day1_morning(callback):
 
     """
     I didn't have a chance to appreciate it last night but the bed in my room may be the
-    nicest I've ever been in. I slept like a rock.
+    nicest I've ever used. I slept like a rock.
 
     I stretch and look outside. The sky is still dark but growing red with the coming sun.
     I can't see any activity from my window and I take a moment to just appreciate the quiet.
     """
 
+    call .windgirl_encounter
+
+    scene bg dorm room morning with dissolve
+
     """
-    Today will be the opening ceremony but not for at least an hour more, so I decide to tidy up a bit.
+    Trying to put that out of mind, I return to my room.
+
+    The opening ceremony will be today, but I've got a little time before it'll start,
+    so I decide to tidy up a bit.
 
     After unpacking my two sets of clothes into a wardrobe large enough to make my collection
-    feel inadequate, I turn to set up my personal effects on my desk:
+    feel inadequate, I turned to set up my personal effects on my desk:
 
     A worn dagger that used to belong to my father, and a sharpening stone to maintain it.
 
@@ -33,7 +40,7 @@ label day1_morning(callback):
     I don't wear it much anymore but it felt appropriate to bring whatever protection
     I could muster when leaving home to come here.
 
-    Lastly I pull out a tattered leatherbound notebook. Somewhere between a diary and a sketchbook
+    Lastly I pulled out a tattered leatherbound notebook. Somewhere between a diary and a sketchbook
     I use it regularly and it's showing its age. I'll need to pick up some more parchment for it in
     town.
     """
@@ -41,137 +48,82 @@ label day1_morning(callback):
     show bg dorm hallway morning
 
     """
-    I pull out the last of my traveling rations from my sack and munch on it as I look back outside.
-
-    The sun has stubbornly refused to budge in the sixty seconds it took me to unpack so I decide
-    to explore the dormitory.
-
-    I hear signs of life from other rooms as others are starting to wake.
-    I don't feel like I have the courage needed to endure a run-in with my neighbors yet,
-    so I move with haste to a quieter section of the building.
-
-    A door standing ajar catches my attention and I peek through to find not another bedroom
-    but what appears to be a series of raised washbasins mounted to the wall.
+    I pull out the last of my travel rations from my sack and munch on it as I join the
+    throng of students heading their way to the auditorium.
     """
-
-    show bg sink at truecenter
-    with moveinbottom
-
-    """
-    I approach with curiosity and just as I'm leaning in to get a closer look at the aparatus
-    it springs to life with water running down into the basin, and down a hole in the base.
-
-    I can't help but release a yelp in surprise and rush out the room the way I came in.
-    """
-
-    show bg dorm hallway morning
-    with pushleft
-
-    "
-    I'm crouching in the hall, peaking back into the room, fearing that I've triggered some
-    magical alarm system, when I notice I'm no longer alone.
-    "
-
-    show expression ag.image
-
-    $ ag.meet()
-
-    ag.says "Are you ok there? {i}*snicker*{/i}"
-
-    "She seems to be trying, not very successfully, to stifle laughter after catching me...
-    well I'm not sure what I've done wrong yet but I'd prefer to not get in trouble for it."
-
-    menu:
-        "What do I do?"
-
-        "Play it cool.":
-            mc.says "Ok? Me? I'm great. Why wouldn't I be ok?"
-
-            ag.says "Oh, pardon me, you just seemed a bit alarmed, is all."
-
-        "Come up with an excuse":
-            mc.says "Oh, I'm fine, yep. I was just, uh, making sure no one snuck in there."
-
-            ag.says "Snuck in? I imagine anyone who's made it on campus is welcome to use the facilities."
-
-    "Her smile fades and she looks a little puzzled before asking,"
-
-    ag.says "Have you never used a washroom before?"
-
-    "A washroom? So this room is for washing things, probably powered by some magic?"
-
-    "Swallowing my pride as it doesn't seem like maintaining a bluff will get me anywhere,"
-
-    mc.says "Honestly, no, I've never heard of one before now."
-
-    "A look of shock quickly passes over her face before being replaced by a twinkle of excitement in her eyes."
-
-    ag.says "That's surprsing; they're such marvelous conveniences!"
-
-    "She grabs my arm and pulls me back into the room and shows me how getting near the basin
-    causes the device above it to start emitting a fountain of water."
-
-    ag.says """The basis is a fairly standard water artifice hidden behind the wall with some clever
-    engineering to funnel the watter the right way without causing a mess. The real genius, however,
-    is how newer installations react to your mana to immediately begin dispensing when you approach.
-
-    I thought you might have never used an automatic one before, which was alarming the first time
-    I tried one as a child... but to think you've never used a washroom before.
-
-    I know the technology's only a few decades old, but I've grown up with them my whole life
-    so it's such hardship when I have do without while traveling.
-
-    What house are you from that doesn't have washrooms in their estate?
-    """
-
-    "What house? My confusion seems to show as she interjects:"
-
-    $ ag.introduce()
-
-    ag.says "Oh where are my manners? I'm [ag.name()], of house [ag.family_name]."
-
-    "It finally clicks. She's nobility. I have no idea what the etiquette is around introductions
-    but she doesn't look like she'll take any transgression personally."
-
-    mc.says "I'm [mc.name()] of Karnsley. I'm afraid I don't belong to any of the noble houses."
-
-    ag.says "Oh, wow. I'm sorry for jumping to conclusions. Are you employed by the academy?"
-
-    mc.says "I'm actually a student, or will be once the term start."
-
-    ag.says "Really? I didn't realize the school admitted commoners. Well I've made a fool of myself."
-
-    mc.says "True, the only way you could look more foolish is if I had caught you panicking over being
-    caught tresspassing by an automatic washbasin,"
-
-    "I reply with a grin and we both laugh off the awkward circumstances of our meeting."
-
-    "I was apprehensive about how to interact with other students here, but I'm totally disarmed by
-    how friendly [ag.name()] has been."
-
-    ag.says "Ok, in that case, I {i}have{/i} to show you the toilets.
-    This is going to change your life."
-
-    """
-    She drags me back into the washroom to show me several other wonders and we spend
-    a while together, her excitedly describing the workings of the artifice mechanisms involved,
-    and me mostly just trying to keep up.
-
-    Apparently the school also has indoor bath houses, though they're in detached buildings
-    due to the complexity of drawing and draining that much water.
-
-    By the time we're through, the sun has fully risen and there's plenty of motion around the door
-    as students prepare for the day.
-    """
-
-    ag.says "Shoot, I need to get ready if I'm going to be in time for the opening ceremony.
-    It was a pleasure meeting you, [mc.name()]."
-
-    "So we part ways and I join the throng of students heading their way to the auditorium."
 
     call .opening_ceremony
 
     $ callback()
+
+label .windgirl_encounter():
+    play sound "effects/explosion.wav" volume 0.3
+
+    "Which is promptly dirupted by the sound of an explosion."
+
+    show bg dorm hallway morning with dissolve
+
+    "I rush out into the hall, still dressed in my traveling clothes from last night."
+
+    show expression wg.image
+
+    wg.says "Shit!"
+
+    $ wg.meet()
+
+    "I find another student standing in a door frame, the door itself dangling on a single hinge."
+
+    mc.says "What happened? Are you alright?"
+
+    wg.says "Yeah, it's... none of your business. You better not tell anyone about this, OK?"
+
+    "By this point I had made my way in front of the room she was guarding, trying to peek
+    around her to get a better look."
+
+    mc.says "I won't, but do you need any help?"
+
+    "I don't see any major signs of destruction,
+    but a lot of things are strewn across the floor along with some shattered glass."
+
+    wg.says "It's fine, I don't need help."
+
+    menu:
+        "What do I do?"
+
+        "Leave her alone.":
+            "She really didn't look like she wanted anyone bothering her."
+
+            mc.says "Ok, well I'll see you around I guess."
+
+            "I leave her looking troubled but a little releived and head out onto campus."
+
+        "Insist on helping.":
+            "She doesn't look like she really wants anyone bothering her, but
+            I'm driven more by curiosity at this point than anything else."
+
+            mc.says "Look, just let me help you, it'll be easier with two people."
+
+            "I start to step around her, but she deftly moves to stand in my way."
+
+            wg.says "I said, I don't need any help!"
+
+            $ wg.aff_change(-3)
+
+            """
+            She gives me a shove, and at the same time a strong gust blows in through her
+            open window.
+
+            The window swings loudly and I notice that some of the panes have broken off,
+            which accounts for the glass I saw in the room.
+            """
+
+            mc.says "Sorry, I'll leave you alone then."
+
+            "I can't help but be a little alarmed, and she looks embarassed but releived to see me go.
+            I guess I didn't make the best first impression."
+
+    return
+
 
 label .opening_ceremony:
 
@@ -186,22 +138,23 @@ label .opening_ceremony:
 
     show expression hm.image
 
-    """An elderly man makes his way onto the central podium on the stage. He's clearly quite frail but
-    somehow manages to exude power at the same time.
+    """An elderly man makes his way slowly onto the central podium on stage.
+    He's clearly quite frail but somehow manages to exude power at the same time.
 
     All the chatter dies down.
     """
 
     hm.says "{size=72}{cps=20}POTENTIA UTENDEM EST!{/cps}{/size}"
 
-    "The old man roars, far louder than should be possible, and no hint of frailty remains in his frame."
+    "The old man roars, far louder than should be possible, and no hint of frailty
+    remains in his frame."
 
     hm.says """These are the words of our institution. These are the words we will instill in you.
     And if you expect to survive here, these are the words you must live by.
 
-    First, you must know who we are.
+    First, you will know who we are.
 
-    We are not spiritual theoreticians like you will find in the institutions of the east.
+    We are not spiritual philosophers like you will find in the east.
 
     We are not diviners and supplicants to the spirits as you will find in the temples
     to the south.
@@ -218,10 +171,10 @@ label .opening_ceremony:
     We will mold you into the magi of tomorrow and you will be greater than anything
     that has come before.
 
-    But as you grow in power so too will you grow in your duty to put that power to use.
+    But as you grow in power so too will you grow in your duty to that power.
     There is no greater sin than the inaction of the powerful.
 
-    And once your time is done here you will take what we teach you back to your homes,
+    Once your time is done here you will take what we teach you back to your homes,
     to your lands, to the far corners of the world and you will put it to use.
     """
 
@@ -270,9 +223,7 @@ label .opening_ceremony:
     at the academy by reporting to their guild patrons for duties. They will of course
     have to balance this against their other coursework.
 
-    Each year we tend to have either one or two such students, but this year we have an
-    unprecedented five. I for one look forward to such promising talent joining us for the
-    schoolyear.
+    I for one look forward to such promising talent joining us for the schoolyear.
 
     And that's it! Enjoy the rest of your day off as classes begin tomorrow.
     """
@@ -297,8 +248,9 @@ label .opening_ceremony:
     I knew it was prestigious but I figured I had already been admitted so the hard part was over.
     """
 
-    "I make it as far as the stairs in front of the building, lost my my self-pity, before a staff
-    member stops me to hand me a note. Apparently I'm to report to the Adventurer's guild today for orientation."
+    "I make it as far as the stairs in front of the building, lost in my self-pity, before a staff
+    member stops me to hand me a note. Apparently I'm to report to the Adventurer's guild today for
+    orientation."
 
     return
 
@@ -330,11 +282,11 @@ label .adventurers_guild_intro:
     The Adventurer's guild is a pretty well regarded institution, we even had a small
     branch back home.
 
-    I've thought more than a few times about joining up with them as it always felt like a easy
+    I've thought more than a few times about joining up with them as it always felt like an easy
     solution to the otherwise directionless life I've lead. But my mom wouldn't hear it.
 
     Come to think of it I'm surprised she was convinced to let me come to this school on a
-    guild sponsorship.
+    guild sponsorship at all.
     """
 
     hide expression gr.image
@@ -352,7 +304,7 @@ label .adventurers_guild_intro:
 
     But after he died, no one would ever tell me how it happened. My mother wouldn't tolerate
     talk of him. All I know is that he had been on a particularly dangerous contract for the guild
-    and didn't make it.
+    and didn't make it back.
     """
 
     gm.says """
@@ -365,7 +317,7 @@ label .adventurers_guild_intro:
 
     That being said, your position is not without its perks.
 
-    You are from this day forward, provisional members of the Adventurer's Guild, and will be
+    You will be a provisional member of the Adventurer's Guild, and will be
     granted a provisional license.
 
     This process isn't all too dissimilar to what any prospective adventurer might go through
@@ -389,12 +341,12 @@ label .adventurers_guild_intro:
     the corner from the reception that I hadn't noticed until now."
 
     gm.says """
-    Damn, you're making me talk today. Don't worry, we're almost through.
+    You're making me talk today. Don't worry, we're almost through.
 
     So where was I? Right, so all of that is contingent on your fullfillment of duties to the guild
     and remaining in good academic standing back at the adademy.
 
-    A kid like you from a Podunk-backwater like Karnsley couldn't fathom the sums of money the guild
+    A kid like you from a Podunk-backwater like Alderwood couldn't fathom the sums of money the guild
     is fronting to sponsor your tution up there.
 
     Part of that is paid for from the revenue you'll earn doing contracts, but you can't
@@ -442,8 +394,8 @@ label .adventuers_guild_questions:
 
             He would go to unreasonable lengths to help those in front of him.
 
-            He had all these grand plans of making it big as an adventurer. Bringing back wealth and glory.
-            He figured this was how he'd do right by you all.
+            He had all these grand plans of making it big as an adventurer. Bringing back wealth
+            and glory. He figured this was how he'd do right by you all.
 
             But he didn't understand where his wife and kids needed him most was back home with them.
             And then he went and got himself killed.
@@ -535,15 +487,35 @@ label .market_lunch:
 
     I feel like a lot's happened already and I should take this opportunity to take stock.
 
-    Classes begin tomorrow but more importantly there's an exam at the end of the week that
-    I need to make sure I'm prepared for.
+    I'm here to study at the Qyburn academy. I'm not having to pay for any of it myself because
+    the guild is somehow convinced I'm worth sponsoring. But why?
 
-    I have duties to the Adventurer's Guild, but that can wait until next week.
+    When my mom told me a year ago that this had been decided I didn't really question it.
+    My parents were both adventurers back in the day so I figured it was as a favor to my mom, but
+    I didn't appreciate how much of a big deal it would turn out to be.
 
+    I've always been facinated by magic, but I've never cast anything before on purpose.
+    I guess sometimes when I got really emotional I might accidentally stir up some wind or
+    knock something over. But those kinds of stories weren't uncommon.
+
+    Our local shrine cleric didn't have much of a talent for it. Thile they would perform
+    traditonal rituals during holidays using the spirits there was nothing they could teach me.
+    There would also be traveilng magi from time to time who would stay at our village while
+    passing through. But they never had much patience for me.
+
+    So here I am attending a renowned magical academy when I don't really know the first thing about
+    magic.
+
+    Whatever the reason, classes begin tomorrow and I'm genuinely excited about that, but that
+    excitement is deadened by the prospect of an exam at the end of the week. I don't know if I can
+    prepare for it in time.
+
+    Then starting next week I guess I'll have duties for the Adventurer's guild.
     And the guildmaster said they knew my father. This could be my chance to find out what happened
     to him and what kind of man he was.
 
-    Somewhere between the full stomach and laying out my concerns I feel a lot more in control.
+    It's a lot to handle but somewhere between the full stomach and laying out my concerns
+    I feel a lot more in control.
 
     I also recall that there was one more thing I had been meaning to do in town today. I return
     to the market and pick up a few more peaches before starting on my last mission for the day.

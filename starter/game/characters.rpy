@@ -9,10 +9,13 @@ init -100 python:
 
     class CustomCharacter:
         def __init__(self, name: str, significance: Significance, color: str = "#fff",
-                        dark_outline=True, image=None, met=False, introduced=False):
+                        dark_outline=True, image=None, met=False, introduced=False,
+                        default_name='???', familiar_name=None):
             self.family_name = ' '.join(name.split()[1:])
             self.first_name = name.split()[0]
             self.full_name = name
+            self.default_name = default_name
+            self.familiar_name = self.first_name if familiar_name is None else familiar_name
             self.met = met
             self.introduced = introduced
             self.color = color
@@ -37,7 +40,7 @@ init -100 python:
                 minor_characters.append(self)
 
         def name(self) -> str:
-            return self.first_name if self.introduced else '???'
+            return self.familiar_name if self.introduced else self.default_name
 
         def full_name(self):
             return self.full_name
@@ -72,6 +75,9 @@ default minor_characters = []
 
 define char_folder = 'character_concepts/'
 
+define generic_male = 'character_concepts/generic_male_silhouette.png'
+define generic_female = 'character_concepts/generic_female_silhouette.png'
+
 ### Main Character ###
 
 define mc_color = "#c8d1d2ff"
@@ -95,7 +101,6 @@ define ts_color = "#fff"
 default ts = CustomCharacter("TimeSpirit", Significance.MAJOR, ts_color, image=char_folder+"time_spirit_transparent.png")
 
 ### Minor Characters ###
-
 default minor_character_color = "#fff"
 default hm = CustomCharacter("Headmaster", Significance.MINOR, minor_character_color, image=char_folder+"dean_transparent.png", introduced=True)
 default gr = CustomCharacter("Receptionist", Significance.MINOR, minor_character_color, image=char_folder+"guild_receptionist_transparent.png", met=True, introduced=True)

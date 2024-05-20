@@ -94,6 +94,16 @@ screen map_select(time_slot_map):
             if loc.selectable():
                 # if the rect is too low, draw the text on top
                 if (rect[1] + rect[3]) > (config.screen_height - 100):
+                    if loc.available() and not loc.peek_next().reuse:
+                        fixed:
+                            xysize (30, 30)
+                            ypos rect[1] - 40
+                            xpos int(rect[0] + rect[2] / 2)
+                            yanchor 1.0
+                            xanchor 0.5
+                            add loc.peek_next().icon:
+                                align (0.5, 0.5)
+                                fit "contain"
                     text loc.name:
                         yanchor 1.0
                         xanchor 0.5
@@ -101,6 +111,16 @@ screen map_select(time_slot_map):
                         xpos int(rect[0] + rect[2] / 2)
                         outlines [(1, "#000", 0, 0)]
                 else:
+                    if loc.available() and not loc.peek_next().reuse:
+                        fixed:
+                            xysize (30, 30)
+                            ypos rect[1] + rect[3] + 40
+                            xpos int(rect[0] + rect[2] / 2)
+                            yanchor 0.0
+                            xanchor 0.5
+                            add loc.peek_next().icon:
+                                align (0.5, 0.5)
+                                fit "contain"
                     text loc.name:
                         yanchor 0.0
                         xanchor 0.5

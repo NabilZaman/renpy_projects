@@ -100,7 +100,7 @@ label discover_inn(callback):
     "Here I have discovered the inn"
 
     python:
-        inn.enable()
+        # not a real location yet
         callback()
 
 label discover_carpenter(callback):
@@ -113,7 +113,6 @@ label discover_carpenter(callback):
 init python:
     create_contained_event(explore_town_events, 'discover_dojo')
     create_contained_event(explore_town_events, 'discover_blacksmith')
-    create_contained_event(explore_town_events, 'discover_inn')
     create_contained_event(explore_town_events, 'discover_fountain')
     create_contained_event(explore_town_events, 'discover_back_alley')
 

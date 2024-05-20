@@ -89,7 +89,7 @@ label testing:
 
     "before animation"
 
-    call screen test_card_obj
+    # call screen test_card_obj
     # show test_c
 
     "after animation"
@@ -104,9 +104,9 @@ label start:
     call setup
 
     # This sets off the state machine that will drive the main game. We should not return from this operation until the game has ended.
-    $ state.advance_state()
+    # $ state.advance_state()
 
-    # call testing
+    call testing
 
     "The end."
 
