@@ -334,7 +334,7 @@ init -100 python:
         def get(self, name: str):
             return self._flags[name]
 
-        def set(self, name: str, value: bool) -> None:
+        def set(self, name: str, value: bool = True) -> None:
             self._flags[name] = value
 
 

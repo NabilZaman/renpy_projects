@@ -65,6 +65,11 @@ label theory_lesson3(callback):
 
     $ callback()
 
+label day4_afternoon(callback):
+
+
+    $ callback()
+
 label day4_night(callback):
     scene bg dorm room night with dissolve
 
@@ -101,11 +106,16 @@ label .dream:
 
     I try to scream but taking in enough air to do even that burns my throat.
 
-    And suddenly it's over.
+    I can't speak; I can't think anything except how I can't breathe and I'm going to die.
+
+    Until suddenly it's over.
+
+    Relief washes over me as the last remnants of my consciousness slips away into sleep.
     """
 
     return
 
 init python:
     plot_schedule.schedule_event((4, TOD.MORNING), Event("theory_lesson3"))
+    plot_schedule.schedule_event((4, TOD.AFTERNOON), Event("day4_afternoon", takes_time=False))
     plot_schedule.schedule_event((4, TOD.NIGHT), Event("day4_night"))

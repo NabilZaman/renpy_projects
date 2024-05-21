@@ -4,63 +4,97 @@
 label day0(callback):
     show bg black
 
-    "Driver" "So, m'lord, you're a new student at the institute, huh?"
+    "Driver" "So, m'lord, you're a new student at the Academy, huh?"
 
-    "M'lord?"
+    "M'lord?" # Rethink form of address to be dynamic or non-gendered
 
     show bg carriage night with dissolve
 
-    mc.says "Hmm? Oh, yeah I suppose I will be."
+    mc.says "Hmm? Yeah I suppose I will be."
 
     "Driver" "Pretty unusual, having a pick-up like this.
     Not that it's my first time carrying a student up there or anything."
 
-    mc.says "Really?"
+    mc.says "Oh really?"
 
-    "It was hard focusing on what the driver was saying when so much is happening all around the carriage."
+    """
+    It was hard focusing on what the driver was saying when so much is happening all
+    around the carriage.
 
-    "There was so much life, so much motion. It was like... well, magic."
+    It had been three days since I left home with a caravan heading to the magical city of
+    Ardenvale.
+
+    The trip had been a pleasant one. The caravan was mostly full of merchants heading to ply their
+    trade in the city and other settlements across the north. We were guarded by a family friend,
+    which was how I got my place there.
+
+    The weather was still agreeable and we'd camped under the stars each night while some of
+    the more well traveled members of our group filled my head with stories of the wonders I could
+    expect when we arrived in Ardenvale.
+
+    I had been sure they were exaggerating for effect, but seeing it all for myself now,
+    if anything they were too reserved in their depictions.
+
+    There was so much life, so much motion. It was like... well, magic.
+    """
 
     "Driver" "It's just, you know, odd for one of you to be arriving on your own like this.
     Usually students will have their own retinue. And... more bags, you know?"
 
     mc.says "Mmhmm, yeah."
 
-    "A child running right by us is carrying a stick rapidly changing in color with a stream of sparks flying off the end."
+    "A child running right by us is carrying a stick rapidly changing in color with a stream of
+    sparks flying off the end."
 
     "Driver" "So... you must be one them uh, 'special cases', huh?"
 
-    mc.says "Might be."
+    mc.says "Sure?"
 
-    "Special what?"
+    """
+    Special what?
+
+    I didn't have time to give it much thought as just then a stone disk we were passing by
+    erupted with water all about its circumference. The water formed a wall taller than the carriage
+    that sputtered and splashed as children gleafully ran around it, running their hands through
+    the circular geyser.
+    """
 
     "Driver" "Too right, well, none of my business, that."
 
-    "Whatever the driver was thinking, they got quiet after that, which let me focus on everything around us."
+    """
+    Whatever the driver was thinking, they didn't say more, leaving me to gaze flabbergasted
+    at each wonder we passed by.
 
-    "There were so many wonders on the street. A shop has a sign that spins on its own
-    and reads a different slogan with each revolution."
+    It's not that I hadn't seen magic before. The local spirit temple would perform rituals during
+    holidays which were impressive demontrations in their own right.
 
-    "And there! A woman has her baby in a carriage that seems to be pushing itself."
+    But the tone was always of stoic reverence, giving thanks and showing devotion to the spirits.
+
+    It was nothing like this.
+    """
 
     "Driver" "It always gets lively right before the start of a new term. Plenty to see in town."
 
-    "The driver seemed to notice me gaping out the windows with a grin."
+    """
+    The driver seemed to notice me gaping out the windows with a grin.
 
-    "I continue staring, nearly hanging out the window at one point to watch a fountain erupting with
-    what appear to be flower petals that went off jus as we rode past."
+    I continue staring, nearly hanging out the window at one point to try to read the writing
+    on a shop sign that was revolving on its own, and I could swear it had changed its text
+    since its last revolution.
+    """
 
     "Driver" "Well, I'm sure you'll be learning a lot up there. And we're not too far now."
 
     show bg school approach night with dissolve
 
     "As we round the bend on the street I finally get a proper view at our destination:
-    The Magical Institute of Qyburn"
+    The Magical Institute of Ardenvale
 
-    "Home to the most advanced magical research in the world."
+    Home to the most advanced magical research in the world.
 
-    "No one could see that castle bearing down on them and hang onto any shread of misplaced confidence.
-    Visitors were at the mercy of the powers that reside here."
+    No one could see that castle bearing down on them and hang onto any shread of misplaced confidence.
+    Visitors were at the mercy of the powers that reside here.
+    """
 
     call .welcome
 

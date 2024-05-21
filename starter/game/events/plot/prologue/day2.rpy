@@ -232,16 +232,29 @@ label theory_lesson1(callback):
 
 
 label day2_night(callback):
+    scene bg dorm hallway morning with dissolve
+
+    """
+    I'm heading back to my room at the end of the day when I spot the student from the
+    explosion yesterday working on something in front of her room.
+
+    I stop for a moment to observe. Somehow it seems like she's managed to remount her door which
+    is remarkable given the state it was in yesterday.
+    """
+
+    call .reintroduce_windgirl
+
     scene bg dorm room night with dissolve
 
     """
-    I collapse into my bed at the end of the day, my mind still whirling with everything I've been
-    learning.
+    I return to my room and collapse into my bed.
 
-    Between classes where I'm already way behind the other students and having to report to the
-    guild, I'm worried I won't last long here.
+    Today was our first day of classes and while I feel like I'm learning a lot also feel way
+    behind the other students. Plus a part of me is still worried about what the guild duties
+    will turn out to be. Not to mention I woke up this morning in the infirmary after collapsing
+    last night for reasons I still don't understand.
 
-    But for now it's late and I'm plenty tired so I should try to quell my doubts and get to bed.
+    But for now it's late and I'm plenty tired so I try to quell my doubts and get to bed.
     I can already feel a headache coming on.
 
     I close my eyes and begin to drift.
@@ -251,12 +264,150 @@ label day2_night(callback):
 
     $ callback()
 
+label .reintroduce_windgirl:
+
+    """
+    She seems to notice me watching her, which is alarming given how our meeting went yesterday.
+
+    Yet, I somehow manage to resist the urge to promptly dash into my room and instead walk over
+    to hers.
+    """
+
+    show expression wg.image
+
+    mc.says "Hey, that's a really impressive job you've done on your door there."
+
+    wg.says "Thanks, I'm used to fixing stuff up back home..."
+
+    "She looks a bit uncomfortable, still."
+
+    if state.flags.get('wg_bad_intro'):
+
+        mc.says "I wanted to appologize about yesterday. I was wrong to push so hard."
+
+        "She actually seems to brighten a little at this."
+
+        wg.says "Yeah, well, you were wrong. But you're also fogiven.
+        I was a bit pricklier than I intended to be."
+
+        wg.aff_change(3)
+    else:
+        wg.says "I'm sorry about yesterday. I was a bit pricklier than I intended to be."
+
+        mc.says "No need, I get it."
+
+        """
+        I say, not being entirely honest. I don't really get what the big deal
+        was but I don't need to be making enemies of my hallmates on my first week.
+        """
+
+    mc.says "Well I can get out of your way then."
+
+    wg.says "Look, just let me explain, will you?"
+
+    "She blurts this out looking like she's had more to say but has been struggling to get it out."
+
+    wg.says """
+    I'm not used to any of this. The big castle, the elaborate furnishings, even just... being
+    indoors so much.
+
+    So the day of the oppening ceremony what do I do but blow up my big fancy room with furniture
+    worth more than my family makes in a year. I was sure I was going to get kicked out if
+    anyone found out.
+
+    Then of course you show up.
+
+    I'm not looking to go biting the heads off of everyone I meet, but I value my privacy to begin
+    with and I just wasn't ready for any of this.
+
+    So can we just start over?
+    """
+
+    mc.says "I'd love to."
+
+    $ wg.introduce()
+
+    wg.says "Great. I'm [wg.name()]. No house, just [wg.name()]."
+
+    "House? Oh she means noble family."
+
+    mc.says "I'm [mc.name()], I don't come from any noble house either."
+
+    wg.says "Really? How'd you end up in here?"
+
+    mc.says "I'm sponsored by the Adventurer's Guild."
+
+    wg.says "No shit, I'm backed by the Navigator's Guild! I thought I was the only one."
+
+    mc.says """
+    Haha, yeah I think I've been a bit more clueless than you, to be honest.
+    I didn't realize that most of the students here would be from noble families.
+
+    All the accomodations and furniture are well beyond me too. The beds are the nicest I've ever
+    slept on.
+    """
+
+    wg.says "Man, I'm the opposite. They're so soft I just can't get comfortable in them."
+
+    "We've been talking this whole time in front of her room and it's in much better shape
+    than it was yesterday, but her window doesn't look like it's been repaired yet."
+
+    mc.says "So... I know you just said you valued your privacy, but I couldn't help noticing
+    your window. You probably have it under control but it's a bit chilly tonight and I
+    just want you to know I'm happy to help if you want it."
+
+    "She looks back and shifts a little uncomfortably."
+
+    wg.says "I found a replacement part, but the way it's mounted is pretty annoying. I guess
+    I could use the help since you're offering."
+
+    """
+    I only let the shock show on my face briefly before she beckons me in to show me what needs
+    doing. Apparently the new pane needs to be mounted from outside but there's a latch that needs
+    to be depressed from inside so it's clearly meant to be a two person operation.
+
+    I head outside with the replacement pane and locate the exterior of her room. She instructs me
+    on how to put the pane into place. It takes a bit of force but eventually everything snaps into
+    place.
+
+    I return to her room to admire the product of our labor.
+    """
+
+    $ wg.aff_change(5)
+
+    wg.says "Thanks for the help."
+
+    mc.says "It's no trouble. Can't even tell this place was a disaster area just yesterday."
+
+    "She gives me a light punch."
+
+    wg.says "Alright that's enough help from you,"
+
+    mc.says "But wait I've been dying to ask you how you blew up your room."
+
+    wg.says "Ugh, that story can wait until {i}I've{/i} stopped dying from embarrasment at the whole
+    ordeal. Good night."
+
+    """
+    She says this as she pushes me out of her room and closes her miraculously functioning door
+    for emphasis.
+
+    I was pretty worried after our first encounter but my heart feels a bit lighter riding
+    on the hope that I may have made my first friend here.
+    """
+
+    return
+
 label .dream:
     """
     ...
 
     I feel... heat. And pain. My head throbs insistently.
     And there's a persistent thrumming in my ears.
+
+    The heat is coming.
+
+    No, it's here. It's all around me.
 
     The thoughts are hard to pin down.
 

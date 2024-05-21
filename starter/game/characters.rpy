@@ -97,6 +97,12 @@ default tb = CustomCharacter("TwinBoy", Significance.MAJOR, tb_color, image=char
 define ag_color = "#f3d513"
 default ag = CustomCharacter("ArtistGirl", Significance.MAJOR, ag_color, image=char_folder+"green_hair_girl_transparent.png")
 
+define sc_color = "#ff4a4a"
+default sc = CustomCharacter("SportsCharacter", Significance.MAJOR, sc_color, image=generic_male)
+
+define jc_color = "#ff954a"
+default jc = CustomCharacter("JerkCharacter", Significance.MAJOR, jc_color, image=generic_male)
+
 define ts_color = "#fff"
 default ts = CustomCharacter("TimeSpirit", Significance.MAJOR, ts_color, image=char_folder+"time_spirit_transparent.png")
 

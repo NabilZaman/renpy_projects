@@ -98,6 +98,8 @@ label .windgirl_encounter():
             "I leave her looking troubled but a little releived and head out onto campus."
 
         "Insist on helping.":
+            $ state.flags.Set('wg_bad_intro')
+
             "She doesn't look like she really wants anyone bothering her, but
             I'm driven more by curiosity at this point than anything else."
 
@@ -105,7 +107,7 @@ label .windgirl_encounter():
 
             "I start to step around her, but she deftly moves to stand in my way."
 
-            wg.says "I said, I don't need any help!"
+            wg.says "I said, I don't need your help!"
 
             $ wg.aff_change(-3)
 
@@ -186,7 +188,7 @@ label .opening_ceremony:
     $ hm.introduce()
 
     hm.says """
-    In case you haven't gathered it yet, I am the Headmaster at the Qyburn Institute of Magic.
+    For those who don't yet know me, I am the Headmaster at the Ardenvale Institute of Magic.
 
     Now for a few logistical matters. You are all the 238th class at this hallowed institution.
     Or rather you will be.
