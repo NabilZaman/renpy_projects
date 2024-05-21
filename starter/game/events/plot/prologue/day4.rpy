@@ -1,5 +1,6 @@
 
 label theory_lesson3(callback):
+    scene bg lecture hall morning
 
     show expression ti.image
 
@@ -59,16 +60,164 @@ label theory_lesson3(callback):
 
     ti.says "That marks the end of today's lesson. You all displayed a good effort. Those of you
     you had trouble with this step, don't lose heart. You'll have more opportunities to refine your
-    technique durin tomorrow's lesson."
+    technique during tomorrow's lesson."
 
     "With that he dismisses us for our free afternoon period."
 
     $ callback()
 
 label day4_afternoon(callback):
+    scene bg school courtyard morning with dissolve
 
+    """
+    We filter out after class each going our separate ways. I'm fatigued from the effort of
+    practicing Recall today. While I could tell I was getting somewhere it never felt like
+    it fully clicked.
+
+    I want to find a quiet place to keep practicing, but I think back to waking up in the
+    infirmary earlier this week and think better of pushing myself any harder today.
+
+    Instead I remember reading that there was a library on campus. If I can't practice more today,
+    maybe I can find some useful reference material there.
+    """
+
+    call .library_encounter
 
     $ callback()
+
+label .library_encounter:
+
+    scene bg school library with dissolve
+
+    """
+    It doesn't take me long to find the library and when I enter I'm struck first by how dark it is.
+    It was an aggressively sunny day outside but despite having a vaulted ceiling with large windows,
+    the sunlight seems to shy away from the interior of the library building.
+
+    It's takes a moment for my eyes to adjust before I notice the second thing to strike me about
+    the place: the massive staircase leading down below the floor.
+
+    The library itself seems to be a single story structure from the outside, though with
+    tall enough ceilings to grant the building the prestige it deserves. But from inside it becomes
+    clear that it extends for many floors down, from the angle of the railing it's not clear how many
+    floors the spiral staircase descends.
+
+    The staircase itself is maybe 40ft across and each quarter turn descends another floor deeper
+    into the bowels of the facility.
+
+    I'm so entranced by the architecture that it takes me a while to notice the third thing that
+    strikes me: I'm not alone.
+
+    Well, to be clear, the first thing I took note of was that I was alone, or so I thought. But
+    that wasn't too surprising as my experience so far has been there are so few of us
+    on campus yet that nearly anywhere you go you're more likely than not to have the whole place
+    to yourself.
+
+    But in fact, there was someone already here. Another student was settled into corner with
+    half a dozen cushions surrounding them.
+
+    They were poring over a large tome nearly half their own height, but the most
+    bizarre feature of the scene was that while the student was nestled snug in their cocoon
+    of pillows, the tome was completely unsupported, suspeded in space in front of them.
+
+    I'm so intrigued I don't think twice about stepping up to them and interrupting their
+    study.
+    """
+
+    mc.says "Hi, uh, what are you reading?"
+
+    """
+    My interjection seems to startle them completely as the next moment the tome ceases to ignore
+    gravity and lands with a loud {b}*THUMP*{/b} on the ground.
+
+    I move to apologize for intrusion but the student has retreated deeper into their cocoon \u2014
+    there must have been more cushions than my initial estimate \u2014 and the next thing I know
+    one of the pillows is flying straight at me.
+
+    I don't have much experience reacting to these sorts of attacks so I take the full force of it
+    to the face. It's actually quite pleasant.
+    """
+
+    mc.says "Mmph. I'm sorry, look I didn't mean to startle you, I'm a new student and I was just
+    looking around the library. Can you please stop attacking me?"
+
+    "The pillow gremlin peeks her head out of her fort and looks a bit appologetic."
+
+    show expression mg.image
+
+    $ mg.meet()
+
+    mg.says "Sorry."
+
+    mc.says "It's alright. My name's [mc.name()]. Are you also a student here?"
+
+    "Still halfway enclosed in pillows, they nod."
+
+    $ mg.introduce()
+
+    mg.says "[mg.full_name]."
+
+    "She looks really young to be a student, but I don't really know the school's
+    admissions policies."
+
+    mc.says "Nice to meet you. I haven't seen you in class, are you an upperclassmen?"
+
+    "She shakes her head vigorously."
+
+    mg.says "No. I'm joining this year. Maybe."
+
+    "Maybe? The combative tension has let up enough that I finally spare a glance at the tome she
+    was reading. \"insert_something_complicated_sounding_here\""
+
+    mc.says "Okay... well to be honest I didn't have any good reason to intrude.
+    I'm sorry to have bothered you."
+
+    "I move to leave when she erupts from her chrysalis."
+
+    mg.says "Wait!"
+
+    "I stop and get a good look at her for the first time. She's a good foot shorter
+    than me, at least, and can't be more than 13 or 14 years old."
+
+    mg.says "What do you know about mysteries?"
+
+    mc.says "Mysteries?"
+
+    "She nods her head aggressively, and I swear I can see her eyes twinkle."
+
+    mg.says "The wandering closet. The invisible club. The fountain of blood."
+
+    "I didn't think she could baffle me further. But here I am, baffleder than before."
+
+    mg.says "The school hides mysteries. I want to know. I need to."
+
+    mc.says "I'm sorry, I'm not familiar with any of those... mysteries."
+
+    "She looks dejected, then determined."
+
+    mg.says "Will you look?"
+
+    "She wants me to uncover mysteries in the school?"
+
+    mc.says "I mean, yeah, sure? If I come across anything about those mysteries I'll let you know."
+
+    mg.says "Not just these. There are lots. Tell me what you learn."
+
+    mc.says "Ok, I promise."
+
+    """
+    She looks at me critically for a moment then, seemingly satisfied with the outcome of our
+    conversation, *Thwumps* back into her pile of cusions.
+
+    She gives me one last appraising eye before the massive tome that has been resting on the
+    floor since she dropped it lifts back into its place in front of her, flipping to where it
+    left off.
+
+    I've completely lost track of what I was doing in the library to begin with, so I make my
+    retreat to somewhere that I desperately hope makes a little more sense.
+    """
+
+    return
 
 label day4_night(callback):
     scene bg dorm room night with dissolve

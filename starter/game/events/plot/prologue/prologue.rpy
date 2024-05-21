@@ -4,6 +4,9 @@
 # Unused Prologue Scenes
 ##################################################################################
 
+label unused_prologue_scenes:
+    pass
+
 label .unused_sink_encounter:
     show bg black
     show sink at truecenter

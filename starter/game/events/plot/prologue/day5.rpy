@@ -1,5 +1,6 @@
 
 label theory_lesson4(callback):
+    scene bg lecture hall morning
 
     show expression ti.image
 
@@ -98,7 +99,7 @@ label theory_lesson4(callback):
     I pet it gently. It's a hero now. The first pencil to fly by my magic.
     """
 
-    $ state.skills.magic_theory.gain(10)
+    $ state.stats.magic_theory.gain(10)
 
     ti.says "And this is where we'll wrap things up for today. Be sure to attend tomorrow's
     final lesson. We'll be going over in more detail what you'll need to prepare for your exams

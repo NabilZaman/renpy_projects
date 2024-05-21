@@ -88,13 +88,13 @@ default mc = CustomCharacter("MC", Significance.MAIN, mc_color, met=True, introd
 define wg_color = "#3ae766"
 default wg = CustomCharacter("Rae", Significance.MAJOR, wg_color, image=char_folder+"wind_girl_transparent.png")
 
-define tg_color = "#4cd1f6"
+define tg_color = "#4cd1f6" # Cut this character?
 default tg = CustomCharacter("Elena Rozen", Significance.MAJOR, tg_color, image=char_folder+"white_hair_girl_transparent.png")
 
-define tb_color = "#fff"
+define tb_color = "#fff" # Cut this character?
 default tb = CustomCharacter("TwinBoy", Significance.MAJOR, tb_color, image=char_folder+"white_hair_boy_transparent.png")
 
-define ag_color = "#f3d513"
+define ag_color = "#f3d513" # Cut this character?
 default ag = CustomCharacter("ArtistGirl", Significance.MAJOR, ag_color, image=char_folder+"green_hair_girl_transparent.png")
 
 define sc_color = "#ff4a4a"
@@ -102,6 +102,9 @@ default sc = CustomCharacter("SportsCharacter", Significance.MAJOR, sc_color, im
 
 define jc_color = "#ff954a"
 default jc = CustomCharacter("JerkCharacter", Significance.MAJOR, jc_color, image=generic_male)
+
+define mg_color = "#de67ff"
+default mg = CustomCharacter("MysteryGirl", Significance.MAJOR, mg_color, image=generic_female)
 
 define ts_color = "#fff"
 default ts = CustomCharacter("TimeSpirit", Significance.MAJOR, ts_color, image=char_folder+"time_spirit_transparent.png")

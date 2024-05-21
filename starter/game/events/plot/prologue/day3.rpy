@@ -4,6 +4,8 @@ default effort_cost = 10
 
 label theory_lesson2(callback):
 
+    scene bg lecture hall morning
+
     show expression ti.image
 
     ti.says "Welcome back to arcane fundamentals class! Last time we discussed the spiritual
@@ -103,6 +105,7 @@ label theory_lesson2(callback):
         callback()
 
 label day3_afternoon(callback):
+    scene bg school courtyard morning
 
     """
     After class I decided to tour the campus a bit; it would be good to know my way around.
@@ -110,8 +113,8 @@ label day3_afternoon(callback):
     I knew from the signage around the administration that the school had a number
     of facilities outside of the lecture halls.
 
-    There was a garden, music rooms, and a sports field as well as a man-made lake somewhere
-    off-campus.
+    There is a garden, library, music rooms, and a sports field. There is even a man-made lake
+    somewhere off-campus.
 
     The campus itself was pretty empty, most of the students from class had made their way back
     to the dorms or into town, with only a few loitering on campus.
@@ -135,13 +138,13 @@ label .sports_character_encounter:
 
     show expression sc.image
 
-    sc.meet()
+    $ sc.meet()
 
     sc.says "Hey! Fancy seeing a new face around here. Are you a new student?"
 
     mc.says "That's right, I'm [mc.name()]."
 
-    sc.introduce()
+    $ sc.introduce()
 
     sc.says """Just [mc.name()], huh? Well in that case I'm [sc.name()]. It's a pleassure to
     make your acquaintence.
@@ -266,5 +269,5 @@ label .dream:
 
 init python:
     plot_schedule.schedule_event((3, TOD.MORNING), Event("theory_lesson2"))
-    plot_schedule.schedule_event((3, TOD.AFTERNOON), Event("day_3_afternoon", takes_time=False))
+    plot_schedule.schedule_event((3, TOD.AFTERNOON), Event("day3_afternoon", takes_time=False))
     plot_schedule.schedule_event((3, TOD.NIGHT), Event("day3_night"))

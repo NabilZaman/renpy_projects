@@ -1,5 +1,6 @@
 
 label theory_lesson5(callback):
+    scene bg lecture hall morning
 
     show expression ti.image
 

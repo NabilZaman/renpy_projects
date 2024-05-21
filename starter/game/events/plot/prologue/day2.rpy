@@ -88,6 +88,8 @@ label day2(callback):
 
 label theory_lesson1(callback):
 
+    scene bg lecture hall morning
+
     show expression ti.image
 
     $ ti.meet()
@@ -290,7 +292,7 @@ label .reintroduce_windgirl:
         wg.says "Yeah, well, you were wrong. But you're also fogiven.
         I was a bit pricklier than I intended to be."
 
-        wg.aff_change(3)
+        $ wg.aff_change(3)
     else:
         wg.says "I'm sorry about yesterday. I was a bit pricklier than I intended to be."
 

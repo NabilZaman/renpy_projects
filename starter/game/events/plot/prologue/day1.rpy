@@ -98,7 +98,7 @@ label .windgirl_encounter():
             "I leave her looking troubled but a little releived and head out onto campus."
 
         "Insist on helping.":
-            $ state.flags.Set('wg_bad_intro')
+            $ state.flags.set('wg_bad_intro')
 
             "She doesn't look like she really wants anyone bothering her, but
             I'm driven more by curiosity at this point than anything else."

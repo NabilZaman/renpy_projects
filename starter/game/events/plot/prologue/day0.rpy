@@ -87,7 +87,8 @@ label day0(callback):
 
     show bg school approach night with dissolve
 
-    "As we round the bend on the street I finally get a proper view at our destination:
+    """
+    As we round the bend on the street I finally get a proper view at our destination:
     The Magical Institute of Ardenvale
 
     Home to the most advanced magical research in the world.

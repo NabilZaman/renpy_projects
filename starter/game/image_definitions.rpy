@@ -24,6 +24,7 @@ image bg school infirmary morning = Frame(bg_folder + 'school_infirmary_morning.
 image bg shrine evening = Frame(bg_folder + "shrine_evening.jpg")
 image sink = bg_folder + "sink.jpg"
 image bg town street afternoon = Frame(bg_folder + 'town_street_afternoon.jpg')
+image bg school library = Frame(bg_folder + 'school_library.jpg')
 
 # menu backgrounds
 image bg_menu = "icons/menu_bg.png"
