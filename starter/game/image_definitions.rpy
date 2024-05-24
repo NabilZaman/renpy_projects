@@ -20,11 +20,13 @@ image bg school admin morning = Frame(bg_folder + "school_admin_morning.jpg")
 image bg school approach night = Frame(bg_folder + "school_approach_night.jpg")
 image bg school auditorium = Frame(bg_folder + "school_auditorium.jpg")
 image bg school courtyard morning = Frame(bg_folder + 'school_courtyard_morning.jpg')
+image bg school fountain night = Frame(bg_folder + 'school_fountain_night.jpg')
 image bg school infirmary morning = Frame(bg_folder + 'school_infirmary_morning.jpg')
+image bg school library = Frame(bg_folder + 'school_library.jpg')
 image bg shrine evening = Frame(bg_folder + "shrine_evening.jpg")
 image sink = bg_folder + "sink.jpg"
 image bg town street afternoon = Frame(bg_folder + 'town_street_afternoon.jpg')
-image bg school library = Frame(bg_folder + 'school_library.jpg')
+
 
 # menu backgrounds
 image bg_menu = "icons/menu_bg.png"

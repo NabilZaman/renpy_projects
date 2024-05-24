@@ -91,7 +91,7 @@ label theory_lesson4(callback):
 
     It feels as if everything is different now, it feels as if I can do anything.
 
-    I'm still watching the penceil intently, but distracted by my thoughts I'm surprised when I
+    I'm still watching the pencil intently, but distracted by my thoughts I'm surprised when I
     feel with a jolt the pencil can't rise anymore, it must have hit the ceiling. It shakes my
     concentration and the pencil comes plummeting down.
 

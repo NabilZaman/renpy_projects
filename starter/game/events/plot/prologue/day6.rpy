@@ -117,6 +117,39 @@ label day6_night(callback):
     scene bg dorm room night with dissolve
 
     """
+    I return to my room at the end of the day. I'm tired but it's still not too late and
+    I'm not ready to sleep.
+
+    Tomorrow will be the the exam. I don't really feel ready yet, so I pull out my notes
+    from this class and decide to review what we've learned.
+
+    I hadn't spent more than 10 minutes going through my notes before I hear the sounds of
+    rapid footsteps down the hall accompanied by what sounded like banging on doors.
+    """
+
+    "???" "Get up! Get out! Aspirants out of your rooms!"
+
+    """I open my door to get a look at what's going on.
+
+    I see several older students running down the halls, banging on doors.
+
+    Other students are opening their room doors, looking as confused as I am, many of them
+    in their nightwear.
+    """
+
+    "Older Student" "Everyone get out! Come on let's go, let's go. Get a move on."
+
+    "One of the upperclassmen catch sight of me peeking out from my room."
+
+    "Older Student" "You there, stop dawdling and get out of there. Everyone out into the couryard!"
+
+    call .initiation
+
+    scene bg dorm room night with dissolve
+
+    call .dream
+
+    """
     Tonight the thrumming begins earlier than before.
 
     I realize it's the same sensation I get when I push myself too hard to attune to the spirits.
@@ -135,9 +168,158 @@ label day6_night(callback):
     I'm able to ignore it well enough that it doens't take long to fall asleep.
     """
 
-    call .dream
-
     $ callback()
+
+label .initiation:
+    scene bg school fountain night
+
+    """
+    I join the crowd of first year students shuffling out the dormitory doors.
+    A general murmur of confusion and annoyance covers up the underlying quiet
+    unease we all felt. What was going on?
+
+    There was a chill in the air that I shivered against; the nights had started to grow colder
+    and I didn't think to grab a cloak on the way out of my room.
+
+    Some other upperclassmen seemed to be stationed out in the couryard and were directing the
+    crowd further.
+    """
+
+    "Older Student" "To the fountain, move along now, pick up the pace."
+
+    """
+    As the train of first years arrived near the rather impressive fountain at the center of the
+    courtyard, other upperclassmen were already organizing us into a ring around the structure.
+
+    I had learned the fountain itself was powered by water artifice, not dissimilar from the
+    self-filling wash basins in the restrooms in the dorms, and would erupt with
+    water at regular intervals puting on a show that less than a week ago would have left me stunned.
+
+    It was still plenty impressive while we mingled into a circle around the fountain while
+    the last stragglers funneled in and we all awaited further instruction.
+
+    A the upperclassmen we forming a group themselves as they were released from their
+    duties ushering the first year students. Several were stepping onto what seemed to be an
+    improvised wooden podium while the rest were positioned on the ground at the
+    opposite end of the circle.
+
+    One of them upperclassmen on the podium stepped forward carrying a large gnarled staff.
+    She cleared her throat to speak.
+    """
+
+    wc.says "Aspirants! Brothers and sisters to be. Heed me."
+
+    """
+    The effect was similar to when the headmaster addressed us in the opening ceremony, though
+    not quite as pronounced.
+
+    As if on cue the fountain quieted down as it completed its latest cycle of eruptions and
+    became motionless more quickly than could be natural.
+    The whispering stopped and the crowd was as still as the water.
+    """
+
+    wc.says "{size=40}You come seeking power.{/size}"
+
+    """
+    {size=40}*BAM*{/size}
+
+    She slams her staff on the podium and ripple moves across the water in the fountain.
+    """
+
+    wc.says "{size=20}You will have it.{/size}"
+
+    wc.says "{size=40}You come thirsting for knowledge.{/size}"
+
+    "{size=40}*BAM*{/size}"
+
+    wc.says "{size=20}You will have it.{/size}"
+
+    wc.says "{size=40}You come wanting a home.{/size}"
+
+    "{size=40}*BAM*{/size}"
+
+    wc.says "{size=20}You will find one here.{/size}"
+
+    "With each successive slam of her staff the water is aggitated more strongly. It's roiling now,
+    sloshing against the sides of the fountain."
+
+    wc.says "But these gifts must be earned."
+
+    wc.says "You will work, and you will struggle, and you will grow. But this will not be enough."
+
+    "{size=40}*BAM*{/size}"
+
+    """
+    Her strike of the staff seems to cause the water of the fountain to erupt again.
+    But not in a graceful spectacle as it does on its regular schedule.
+    It forms a torrential wall of water 11 or 12 feet high around the fountain.
+    """
+
+    wc.says "{size=20}The obstacles in your path are too great to face alone.{/size}"
+
+    """Her voice sounds almost solemn but it's hard to take notice as
+    the water starts to swirl, frothing and growing angrier.
+
+    Several students inch away reflexively but the crowd is packed enough that most have
+    no room to move.
+    """
+
+    wc.says "Tomorrow you will take your exams and some of you will earn your places here
+    at the Academy. The rest will return from whence they came. But tonight I bind you as one."
+
+    """And the swirling water, barely contained by the magic fueling it, is set free as a deluge
+    washes over the crowd of first years and we erupt in shrieks of alarm.
+
+    The force of the water isn't actually so bad. No one I could see fell over, though several
+    were bracing themselves on each other.
+    But the force of the impact wasn't the real effect.
+
+    It wasn't anywhere near freezing tonight, but the wind was persistent enough that
+    being abruptly soaked through had suddenly made everyone very uncomfortably cold.
+
+    The upperlassman leading the event had to raise her voice beyond its already magically
+    aplified levels to speak over our alarmed reactions.
+    """
+
+    wc.says "You will pledge your strength to each other!"
+
+    "{size=40}*BAM*{/size}"
+
+    "The exclamations quieted down and while I stood there shivering it took me a while to notice
+    the wind had completely stopped."
+
+    wc.says "You will pledge your strength to the school!"
+
+    "{size=40}*BAM*{/size}"
+
+    """
+    On the other end of the fountain where the other group of upperclassmen had gathered, roughly
+    half of them had channeled large flames suspended in front of them. I couldn't feel the heat from
+    where I stood but the light was almost blinding against the dark night.
+    """
+
+    wc.says "You will pledge your strength to the realm!"
+
+    "{size=40}*BAM*{/size}"
+
+    "And a force of heated wind blew over the crowd of shivering students, easing our "
+
+    # wc.says "One __, one ___, one family of magi united across the realm."
+
+
+    """You have come here yearning. You have come here wanting."""
+
+    "You will be bound."
+
+    "You will be united."
+
+    "You will pledge your strengths to the school and each other."
+
+    ""
+
+
+
+    return
 
 label .dream:
     """
@@ -148,7 +330,7 @@ label .dream:
 
     The lights I've seen before are clearer. Reds and yellows and oranges.
 
-    And a new sensation strikes me. I can smell Smoke.
+    I can smell smoke again.
 
     When the witch caught us I panicked and ran.
 
@@ -162,11 +344,12 @@ label .dream:
 
     But when we got caught I was so surprised I lost it. I must have dropped it while we were running.
 
-    Now I'm back at the abandoned temple. The artifice must have triggered and the long dead and
+    Now I'm back at the abandoned temple. The artifice must have activated and the long dead and
     untreated wood of the structure eagerly took to the flame.
 
-    The flame grows and grows and consumes everything. I feel it coming to get me and I'm ready
-    to accept it.
+    The conflagration grows and hungers. It consumes everything.
+
+    I feel it coming to get me and I brace myself to meet it.
     """
 
     return

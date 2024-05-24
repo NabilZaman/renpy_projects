@@ -109,6 +109,9 @@ default mg = CustomCharacter("MysteryGirl", Significance.MAJOR, mg_color, image=
 define ts_color = "#fff"
 default ts = CustomCharacter("TimeSpirit", Significance.MAJOR, ts_color, image=char_folder+"time_spirit_transparent.png")
 
+define wc_color = "#1f75ff"
+default wc = CustomCharacter("WaterCharacter", Significance.MAJOR, wc_color, image=generic_female)
+
 ### Minor Characters ###
 default minor_character_color = "#fff"
 default hm = CustomCharacter("Headmaster", Significance.MINOR, minor_character_color, image=char_folder+"dean_transparent.png", introduced=True)
